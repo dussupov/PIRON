@@ -1,0 +1,24 @@
+@font-face {
+  font-family: "Artifakt-Regular";
+  src: url("/fonts/ArtifaktElement-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Artifakt-Medium";
+  src: url("/fonts/ArtifaktElement-Medium.woff.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Artifakt-Light";
+  src: url("/fonts/ArtifaktElement-Light.woff.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Artifakt-Bold";
+  src: url("/fonts/ArtifaktElement-Bold.woff.ttf") format("truetype");
+}
+body {
+  font-family: "Artifakt-Regular", sans-serif;
+  background-color: #202932;
+  background-image: url("/img/register/bg-line.svg");
+  max-width: 1920px;
+  width: 100%;
+  height: 100vh;
+}

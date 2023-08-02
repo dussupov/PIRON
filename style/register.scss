@@ -1,0 +1,176 @@
+.register{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    &::after{
+        content: "";
+        border-radius: 831px;
+        opacity: 0.1000000015;
+        background: rgba(98, 255, 84, 0.4);
+        filter: blur(100px);
+        width: 800px;
+        height: 800px;
+        position: absolute;
+        top: -20%;
+        left: -5%;
+    }
+    &::before{
+        content: "";
+        background-image: url(/img/register/union.svg);
+        position: absolute;
+        bottom: 0;
+        z-index: -1;
+        width: 470px;
+        background-repeat: no-repeat;
+        height: 360px;
+        right: 0;
+    }
+    .feedback{
+        font-family: 'Artifakt-Bold', sans-serif;
+        margin-top: 50px;
+        .feedback-subtitle a{
+            color: #8AD6F0;
+            text-decoration: none;
+        }
+    }
+    .main-items{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        .main-item{
+            width: 50%;
+            span{
+                color: #F8FEFE;
+            }
+            &.right{
+                padding-top: 7%;
+                width: 38%;
+                .form-subtitle{
+                    margin: 20px 0;
+                    opacity: .9;
+                    font-size: 18px;
+                }
+                .form-input{
+                    margin-top: 20px;
+                    .form-input__email{
+                        margin-top: 40px;
+                        margin-bottom: 30px;
+                        display: flex;
+                        flex-direction: column;
+                        label{
+                            color: #F8FEFE;
+                            span{
+                                color: #FED578;
+                            }
+                        }
+                        input{
+                            position: relative;
+                            margin-top: 7px;
+                            background-color: #202932;
+                            padding: 16px 30px;
+                            border: 1px solid #464E61;
+                            border-radius: 5px;
+                            outline: none;
+                            color: #6B7177;
+                            &::placeholder{
+                                color: #6B7177;
+                                font-size: 16px;
+                                font-weight: 400;
+                            }
+                            &:focus{
+                                color: #6B7177;
+                            }
+                        }
+                    }
+                    .form-input__checkbox{
+                        margin-bottom: 40px;
+                        input{
+                            cursor: pointer;
+                            position: relative;
+                            width: 24px;
+                            height: 24px;
+                            appearance: none;
+                            -webkit-appearance: none;
+                            background-color: transparent;
+                            border: 1px solid #4D5359;
+                            border-radius: 4px; 
+                            &:checked::before{
+                                content: "";
+                                position: absolute;
+                                top: 4px;
+                                left: 4px;
+                                width: 14px;
+                                height: 14px;
+                                background-color: #F8FEFE;
+                                border-radius: 2px;
+                            }
+                        }
+                        label{
+                            opacity: 0.9;
+                            margin-left: 20px;
+                            font-size: 16px;
+                            font-weight: 400;
+                            color: #F8FEFE;
+                            a{
+                             color: #8AD6F0;
+                             text-decoration: none;
+                            }
+                        }
+                        .personal_info{
+                            display: flex;
+                            margin-bottom: 16px;
+                        }
+                        .platform_conditions{
+                            display: flex;
+                        }
+                    }
+                    .form-btn{
+                        width: 485px;
+                        height: 65px;
+                        background-color: #464E61;
+                        border: none;
+                        color: #F8FEFE;
+                        font-weight: 400;
+                        font-size: 18px;
+                        border-radius: 5px;
+                    }
+                }
+            }
+        }
+    }
+
+    .modal{
+        color: #F8FEFE;
+        .modal-content{
+            background-color: #202932;
+            width: 585px;
+            padding: 30px;
+            .button-close{
+                position: absolute;
+                right: 25px;
+                top: 25px;
+                background-image: url(/img/register/btn-close.svg);
+                width: 30px;
+                border: none;
+                background-color: transparent;
+                height: 30px;
+            }
+        }
+        .modal-header{
+            border-bottom: none;
+        }
+        .modal-footer{
+            border-top: none;
+            .modal-btn{
+                width: 485px;
+                height: 65px;
+                background-color: #464E61;
+                border: none;
+                color: #F8FEFE;
+                font-weight: 400;
+                font-size: 18px;
+            }
+        }
+    }
+}

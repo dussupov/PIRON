@@ -1,0 +1,191 @@
+.register {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.register::after {
+  content: "";
+  border-radius: 830px;
+  opacity: 0.1;
+  background: rgba(98, 255, 84, 0.4);
+  filter: blur(100px);
+  width: 800px;
+  height: 800px;
+  position: absolute;
+  top: -20%;
+  left: -5%;
+}
+.register::before {
+  content: "";
+  background-image: url(/img/register/union.svg);
+  position: absolute;
+  z-index: -1;
+  bottom: 0;
+  width: 470px;
+  background-repeat: no-repeat;
+  height: 360px;
+  right: 0;
+}
+.register .feedback {
+  font-family: "Artifakt-Bold", sans-serif;
+  margin-top: 50px;
+}
+.register .feedback .feedback-subtitle a {
+  color: #8AD6F0;
+  text-decoration: none;
+}
+.register .main-items {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.register .main-items .main-item {
+  width: 50%;
+}
+.register .main-items .main-item span {
+  color: #F8FEFE;
+}
+.register .main-items .main-item.right {
+  padding-top: 5%;
+  width: 38%;
+}
+.register .main-items .main-item.right .form-subtitle {
+  margin: 20px 0;
+  opacity: 0.9;
+  font-size: 18px;
+}
+.register .main-items .main-item.right .form-input {
+  margin-top: 20px;
+}
+.register .main-items .main-item.right .form-input .form-input__login,
+.register .main-items .main-item.right .form-input .form-input__password {
+  position: relative;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.register .main-items .main-item.right .form-input .form-input__login label,
+.register .main-items .main-item.right .form-input .form-input__password label {
+  color: #F8FEFE;
+}
+.register .main-items .main-item.right .form-input .form-input__login label span,
+.register .main-items .main-item.right .form-input .form-input__password label span {
+  color: #FED578;
+}
+.register .main-items .main-item.right .form-input .form-input__login input,
+.register .main-items .main-item.right .form-input .form-input__password input {
+  position: relative;
+  margin-top: 7px;
+  background-color: #202932;
+  padding: 16px 30px;
+  border: 1px solid #464E61;
+  border-radius: 5px;
+  outline: none;
+  color: #6B7177;
+}
+.register .main-items .main-item.right .form-input .form-input__login input::placeholder,
+.register .main-items .main-item.right .form-input .form-input__password input::placeholder {
+  color: #6B7177;
+  font-size: 16px;
+  font-weight: 400;
+}
+.register .main-items .main-item.right .form-input .form-input__login input:focus,
+.register .main-items .main-item.right .form-input .form-input__password input:focus {
+  color: #6B7177;
+}
+.register .main-items .main-item.right .form-input .form-input__login .show-password,
+.register .main-items .main-item.right .form-input .form-input__password .show-password {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  background-image: url("/img/authorization/visibility_off.svg");
+  top: 53%;
+  right: 6%;
+  cursor: pointer;
+}
+.register .main-items .main-item.right .form-input .form-input__password {
+  margin-top: 0;
+  margin-bottom: 25px;
+}
+.register .main-items .main-item.right .form-input .form-input__checkbox {
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+.register .main-items .main-item.right .form-input .form-input__checkbox input {
+  cursor: pointer;
+  position: relative;
+  width: 24px;
+  height: 24px;
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: transparent;
+  border: 1px solid #FFF;
+  border-radius: 4px;
+}
+.register .main-items .main-item.right .form-input .form-input__checkbox input:checked::before {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 13px;
+  height: 13px;
+  background-color: #F8FEFE;
+  border-radius: 2px;
+}
+.register .main-items .main-item.right .form-input .form-input__checkbox label {
+  opacity: 0.9;
+  margin-left: 20px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #F8FEFE;
+}
+.register .main-items .main-item.right .form-input .form-input__checkbox label a {
+  color: #8AD6F0;
+  text-decoration: none;
+}
+.register .main-items .main-item.right .form-input .form-input__checkbox .remember-me {
+  display: flex;
+  margin-bottom: 16px;
+}
+.register .main-items .main-item.right .form-input .form-input__checkbox .forgot-password a {
+  text-decoration: none;
+  border-bottom: 1px solid #F8FEFE;
+  color: #F8FEFE;
+  font-size: 18px;
+}
+.register .main-items .main-item.right .form-input .form-btn {
+  width: 100%;
+  height: 65px;
+  background-color: #464E61;
+  border: none;
+  color: #F8FEFE;
+  font-weight: 400;
+  font-size: 18px;
+  border-radius: 5px;
+}
+.register .main-items .main-item.right .form-input .form-errors {
+  margin-top: 20px;
+  padding-left: 70px;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  border: 1px solid #E53429;
+  background: rgba(229, 52, 41, 0.02);
+  backdrop-filter: blur(4px);
+  height: 45px;
+}
+.register .main-items .main-item.right .form-input .form-errors .form-errors__text::after {
+  content: "";
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  left: 30px;
+  background-image: url("/img/authorization/u_exclamation-circle.svg");
+}
+.register .main-items .main-item.right .form-input .form-errors .form-errors__text span {
+  font-weight: 400;
+  color: #E53429;
+}
