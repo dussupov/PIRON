@@ -172,7 +172,23 @@ main::after {
   justify-content: space-between;
 }
 .content .content-main .content-forms {
-  width: 65%;
+  width: 68%;
+}
+.content .content-main .content-forms .content-form__bar .content-form__bar-items {
+  display: flex;
+  background: #464E60;
+  padding: 20px;
+  justify-content: space-evenly;
+  border-radius: 5px;
+}
+.content .content-main .content-forms .content-form__bar .content-form__bar-items .content-form__bar-item {
+  display: flex;
+  height: 36px;
+  border: 1px solid #fff;
+  padding: 8px 16px;
+  border-radius: 27px;
+  gap: 10px;
+  align-items: center;
 }
 .content .content-main .content-infobar {
   width: 30%;

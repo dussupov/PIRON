@@ -182,7 +182,25 @@ main {
         height: 90%;
         justify-content: space-between;
         .content-forms{
-            width: 65%;
+            width: 68%;
+            .content-form__bar{
+                .content-form__bar-items{
+                    display: flex;
+                    background: #464E60;
+                    padding: 20px;
+                    justify-content: space-evenly;
+                    border-radius: 5px;
+                    .content-form__bar-item{
+                        display: flex;
+                        height: 36px;
+                        border: 1px solid #fff;
+                        padding: 8px 16px;
+                        border-radius: 27px;
+                        gap: 10px;
+                        align-items: center;
+                    }
+                }
+            }
         }
         .content-infobar{
             width: 30%;
