@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <link rel="stylesheet" href="/style/dist/general.css">
@@ -69,7 +70,10 @@
                 </div>
 
                 <div class="sidebar-items__close">
-                    <span>Свернуть окно</span>
+                    <div class="sidebar-items__close-item">
+                        <img src="/img/sidebars/arrow-left.svg" alt="arrow">
+                        <span>Свернуть окно</span>
+                    </div>
                 </div>
 
             </div>
@@ -158,24 +162,187 @@
                         </div>
                     </div>
                     <div class="content-form">
-                        <div class="content-form____acquaintance">
-                            <div class="content-form____acquaintance-title">
-                                <h1>Вы попали на платформу «ПИРOnline»</h1>
+                        <div class="content-form__items">
+                            <div class="content-form__welcome active">
+                                <div class="content-form__welcome-title">
+                                    <h1>Вы попали на платформу «ПИРOnline»</h1>
+                                </div>
+                                <div class="content-form__welcome-title">
+                                    <span>С ее помощью вы сможете искать новые проекты, комфортно вести текущие проекты,
+                                        искать исполнителей, вести документацию, отслеживать статистику, анализировать
+                                        данные и многое-многое другое.
+                                        <br><br>
+                                        Для определения необходимого набора модулей просим пройти короткий бриф,
+                                        состоящий всего из двух вопросов. А в конце вас ждет приятный бонус.</span>
+                                </div>
+                                <div class="content-form__gratitude">
+                                    <span>С уважением, команда платформы «ПИРOnline»</span>
+                                </div>
+                                <div class="content-form__welcome-btn">
+                                    <button>Приступить к опросу</button>
+                                </div>
                             </div>
-                            <div class="content-form____acquaintance-title">
-                                <span>С ее помощью вы сможете искать новые проекты, комфортно вести текущие проекты, искать исполнителей, вести документацию, отслеживать статистику, анализировать данные и многое-многое другое.
-                                    <br><br>
-                                    Для определения необходимого набора модулей просим пройти короткий бриф, состоящий всего из двух вопросов. А в конце вас ждет приятный бонус.</span>
+                            
+                            <div class="content-form__acquaintance">
+                                <div class="content-form__acquaintance-title">
+                                    <img src="/img/bar/Group.svg" alt="Group">
+                                    <h1>Знакомство</h1>
+                                </div>
+                                <div class="content-form__acquaintance-subtitle">
+                                    <span>Указание данной информации сообщает системе о системах налогообложения,
+                                        присутствующих в данной стране</span>
+                                </div>
+                                <div class="content-form__acquaintance-form">
+                                    <div class="content-form__acquaintance__country">
+                                        <label for="acquaintanceCountry">Страна<span>*</span></label>
+                                        <select id="acquaintanceCountry" name="country">
+                                            <option value="ru">Россия</option>
+                                            <option value="kz">Казахстан</option>
+                                        </select>
+                                    </div>
+                                    <div class="content-form__acquaintance__city">
+                                        <label for="acquaintanceCity">Город<span>*</span></label>
+                                        <select id="acquaintanceCity" name="city">
+                                            <option value="-">Выберите город из списка</option>
+                                            <option value="kz">Казахстан</option>
+                                        </select>
+                                    </div>
+                                    <div class="content-form__acquaintance__name fs-6">
+                                        <label for="">Ваше имя<span>*</span></label>
+                                        <input type="text" placeholder="Введите ваше имя">
+                                    </div>
+                                </div>
                             </div>
-                            <div class="content-form__gratitude">
-                                <span>С уважением, команда платформы «ПИРOnline»</span>
+
+                            <div class="content-form__selectRole">
+                                <div class="content-form__selectRole-title">
+                                    <img src="/img/bar/users-alt.svg" alt="Group">
+                                    <h1>Укажите вашу роль</h1>
+                                </div>
+                                <div class="content-form__selectRole-items">
+                                    <div class="content-form__selectRole-item">
+                                        <input type="checkbox" name="GIP" id="GIP">
+                                        <label for="">ГИП</span>
+                                        <img src="/img/brif/help_outline.svg" alt="help">
+                                    </div>
+                                    <div class="content-form__selectRole-item">
+                                        <input type="checkbox" name="GIP" id="GIP">
+                                        <label for="">ГИП</span>
+                                        <img src="/img/brif/help_outline.svg" alt="help">
+                                    </div>
+                                    <div class="content-form__selectRole-item">
+                                        <input type="checkbox" name="GIP" id="GIP">
+                                        <label for="">ГИП</span>
+                                        <img src="/img/brif/help_outline.svg" alt="help">
+                                    </div>
+                                    <div class="content-form__selectRole-item">
+                                        <input type="checkbox" name="GIP" id="GIP">
+                                        <label for="">ГИП</span>
+                                        <img src="/img/brif/help_outline.svg" alt="help">
+                                    </div>
+                                    <div class="content-form__selectRole-item">
+                                        <input type="checkbox" name="GIP" id="GIP">
+                                        <label for="">ГИП</span>
+                                        <img src="/img/brif/help_outline.svg" alt="help">
+                                    </div>
+                                    <div class="content-form__selectRole-item">
+                                        <input type="checkbox" name="GIP" id="GIP">
+                                        <label for="">ГИП</span>
+                                        <img src="/img/brif/help_outline.svg" alt="help">
+                                    </div>
+                                    <div class="content-form__selectRole-item disable">
+                                        <input type="checkbox" name="GIP" id="GIP">
+                                        <label for="">ГИП</span>
+                                        <img src="/img/brif/help_outline.svg" alt="help">
+                                    </div>
+                                    <div class="content-form__selectRole-item disable">
+                                        <input type="checkbox" name="GIP" id="GIP">
+                                        <label for="">ГИП</span>
+                                        <img src="/img/brif/help_outline.svg" alt="help">
+                                    </div>
+                                    <div class="content-form__selectRole-item disable">
+                                        <input type="checkbox" name="GIP" id="GIP">
+                                        <label for="">ГИП</span>
+                                        <img src="/img/brif/help_outline.svg" alt="help">
+                                    </div>
+                                    <div class="content-form__selectRole-item disable">
+                                        <input type="checkbox" name="GIP" id="GIP">
+                                        <label for="">ГИП</span>
+                                        <img src="/img/brif/help_outline.svg" alt="help">
+                                    </div>
+                                </div>
                             </div>
-                            <div class="content-form__acquaintance-btn">
-                                <button>Приступить к опросу</button>
+
+                            <div class="content-form__OPF">
+                                <div class="content-form__OPF-title">
+                                    <img src="/img/bar/users-alt.svg" alt="Group">
+                                    <h1>Укажите вашу ОПФ</h1>
+                                </div>
+                                <div class="content-form__OPF-items">
+                                    <div class="content-form__OPF-item">
+                                        <input type="checkbox" name="GIP" id="GIP">
+                                        <label for="">ГИП</span>
+                                        <img src="/img/brif/help_outline.svg" alt="help">
+                                    </div>
+
+                                    <div class="content-form__OPF-item">
+                                        <input type="checkbox" name="GIP" id="GIP">
+                                        <label for="">ГИП</span>
+                                        <img src="/img/brif/help_outline.svg" alt="help">
+                                    </div>
+
+                                    <div class="content-form__OPF-item">
+                                        <input type="checkbox" name="GIP" id="GIP">
+                                        <label for="">ГИП</span>
+                                        <img src="/img/brif/help_outline.svg" alt="help">
+                                    </div>
+
+                                    <div class="content-form__OPF-item">
+                                        <input type="checkbox" name="GIP" id="GIP">
+                                        <label for="">ГИП</span>
+                                        <img src="/img/brif/help_outline.svg" alt="help">
+                                    </div>
+                                    
+                                </div>
+                            </div>
+
+                            <div class="content-form__end">
+                                <div class="content-form__end-title">
+                                    <h1>Спасибо</h1>
+                                </div>
+                                <div class="content-form__end-subtitle">
+                                    <span>
+                                        По завершению вы попадете на рабочий стол платформы.
+                                        <br><br>
+                                        Далее для корректной работы системы необходимо заполнить информацию 
+                                        о себе и/или компании.
+                                        <br><br>
+                                        За ваши старания мы дарим Вам месяц БЕСПЛАТНОГО доступа 
+                                        к системе ...    
+                                    </span>
+                                </div>
+                                <div class="content-form__end-btn">
+                                    <button>Завершить</button>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="content-form__step">
+                            <div class="content-form__step-prev disable">
+                                <button>
+                                    <img src="/img/brif/arrow-left.svg" alt="prev">
+                                    <span>Вернуться назад</span>
+                                </button>
+                            </div>
+                            <div class="content-form__step-next">
+                                <button>
+                                    <span>Следующий вопрос</span>
+                                    <img src="/img/brif/arrow-right.svg" alt="next">
+                                </button>
                             </div>
                         </div>
                     </div>
-                </div>
+                </div>  
                 <div class="content-infobar">
                     <div class="content-infobar__item">
                         <div class="content-infobar__number">
@@ -213,7 +380,8 @@
     <!-- SCRIPT -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous">
-    </script>
+        </script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="/js/script.js"></script>
 </body>
 
