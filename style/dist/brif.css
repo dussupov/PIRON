@@ -26,6 +26,7 @@ main::after {
   background-color: #464E60;
   height: 100%;
   width: 230px;
+  min-width: 230px;
   display: flex;
   flex-direction: column;
   padding: 15px;
@@ -128,6 +129,7 @@ main::after {
   font-weight: 700;
 }
 .sidebar.close {
+  min-width: 80px;
   width: 80px;
 }
 .sidebar.close .sidebar-footer {
@@ -155,8 +157,9 @@ main::after {
 
 .content {
   padding: 40px;
-  width: 100%;
+  width: 88%;
   color: #fff;
+  transition: all 0.3s ease;
 }
 .content header {
   display: flex;
@@ -261,10 +264,8 @@ main::after {
 }
 .content .content-main .content-forms .content-form .content-form__items .content-form__welcome,
 .content .content-main .content-forms .content-form .content-form__items .content-form__end {
-  margin-right: 40%;
   margin-top: 40px;
-  width: 70%;
-  min-width: 70%;
+  padding-right: 35%;
 }
 .content .content-main .content-forms .content-form .content-form__items .content-form__welcome .content-form__welcome-title,
 .content .content-main .content-forms .content-form .content-form__items .content-form__welcome .content-form__end-title,
