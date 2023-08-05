@@ -224,6 +224,14 @@ main::after {
 }
 .content header .header-nav .header-nav__items .header-nav__item {
   margin: 0 15px;
+  background-color: #464E60;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.content header .header-nav .header-nav__items .header-nav__item:hover {
+  background-color: #33C078;
 }
 .content header .header-profile {
   display: flex;
@@ -346,6 +354,35 @@ main::after {
   padding: 20px 40px;
   border-radius: 5px;
   font-size: 18px;
+  position: relative;
+}
+.content .content-main .content-forms .content-form .content-form__items .content-form__welcome .content-form__welcome-btn button span,
+.content .content-main .content-forms .content-form .content-form__items .content-form__welcome .content-form__end-btn button span,
+.content .content-main .content-forms .content-form .content-form__items .content-form__end .content-form__welcome-btn button span,
+.content .content-main .content-forms .content-form .content-form__items .content-form__end .content-form__end-btn button span {
+  position: relative;
+  z-index: 2;
+}
+.content .content-main .content-forms .content-form .content-form__items .content-form__welcome .content-form__welcome-btn button::after,
+.content .content-main .content-forms .content-form .content-form__items .content-form__welcome .content-form__end-btn button::after,
+.content .content-main .content-forms .content-form .content-form__items .content-form__end .content-form__welcome-btn button::after,
+.content .content-main .content-forms .content-form .content-form__items .content-form__end .content-form__end-btn button::after {
+  content: "";
+  width: 0;
+  height: 100%;
+  border-radius: 5px;
+  position: absolute;
+  background-color: #33C078;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  transition: all 0.2s ease;
+}
+.content .content-main .content-forms .content-form .content-form__items .content-form__welcome .content-form__welcome-btn button:hover::after,
+.content .content-main .content-forms .content-form .content-form__items .content-form__welcome .content-form__end-btn button:hover::after,
+.content .content-main .content-forms .content-form .content-form__items .content-form__end .content-form__welcome-btn button:hover::after,
+.content .content-main .content-forms .content-form .content-form__items .content-form__end .content-form__end-btn button:hover::after {
+  width: 100%;
 }
 .content .content-main .content-forms .content-form .content-form__items .content-form__welcome .content-form__end-subtitle,
 .content .content-main .content-forms .content-form .content-form__items .content-form__welcome .content-form__welcome-subtitle,
@@ -531,14 +568,14 @@ main::after {
   background-color: #464E60;
   width: 100%;
 }
-.content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__selectRole-items .content-form__selectRole-item img,
-.content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__selectRole-items .content-form__OPF-item img,
-.content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__OPF-items .content-form__selectRole-item img,
-.content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__OPF-items .content-form__OPF-item img,
-.content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__selectRole-items .content-form__selectRole-item img,
-.content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__selectRole-items .content-form__OPF-item img,
-.content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__OPF-items .content-form__selectRole-item img,
-.content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__OPF-items .content-form__OPF-item img {
+.content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__selectRole-items .content-form__selectRole-item .content-form__selectRole-item__img,
+.content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__selectRole-items .content-form__OPF-item .content-form__selectRole-item__img,
+.content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__OPF-items .content-form__selectRole-item .content-form__selectRole-item__img,
+.content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__OPF-items .content-form__OPF-item .content-form__selectRole-item__img,
+.content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__selectRole-items .content-form__selectRole-item .content-form__selectRole-item__img,
+.content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__selectRole-items .content-form__OPF-item .content-form__selectRole-item__img,
+.content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__OPF-items .content-form__selectRole-item .content-form__selectRole-item__img,
+.content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__OPF-items .content-form__OPF-item .content-form__selectRole-item__img {
   position: absolute;
   right: 20px;
   cursor: pointer;
@@ -665,7 +702,7 @@ main::after {
 .content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__OPF-items .content-form__selectRole-item .content-form__item-help,
 .content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__OPF-items .content-form__OPF-item .content-form__item-help {
   position: absolute;
-  top: -2px;
+  top: -5px;
   opacity: 0;
   visibility: hidden;
   left: -2px;
@@ -742,6 +779,30 @@ main::after {
   display: flex;
   border-radius: 5px;
   font-size: 18px;
+  position: relative;
+}
+.content .content-main .content-forms .content-form__step button span {
+  position: relative;
+  z-index: 2;
+}
+.content .content-main .content-forms .content-form__step button img {
+  position: relative;
+  z-index: 2;
+}
+.content .content-main .content-forms .content-form__step button::after {
+  content: "";
+  width: 0;
+  height: 100%;
+  border-radius: 5px;
+  position: absolute;
+  background-color: #33C078;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  transition: all 0.2s ease;
+}
+.content .content-main .content-forms .content-form__step button:hover::after {
+  width: 100%;
 }
 .content .content-infobar {
   width: 30%;
