@@ -47,15 +47,26 @@ window.addEventListener('load', function () {
 
   SideBarToggle.addEventListener('click', function () {
     SideBar.classList.toggle('close');
+    var windowWidth = window.innerWidth;
 
     if (SideBar.classList.contains('close')) {
       Logo.style.width = '45px';
       Logo.src = '/img/register/logo.svg';
-      Content.style.width = "".concat(ContentW + 140, "px");
+
+      if (windowWidth <= 1580) {
+        Content.style.width = "".concat(ContentW + 80, "px");
+      } else {
+        Content.style.width = "".concat(ContentW + 120, "px");
+      }
     } else {
       Logo.style.width = '125px';
       Logo.src = '/img/Logo.svg';
-      Content.style.width = "".concat(ContentW - 140, "px");
+
+      if (windowWidth <= 1580) {
+        Content.style.width = "".concat(ContentW - 20, "px");
+      } else {
+        Content.style.width = "".concat(ContentW - 120, "px");
+      }
     }
   });
   var swiper = new Swiper(".content-form__items", {

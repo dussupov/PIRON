@@ -47,14 +47,23 @@ window.addEventListener('load', () => {
 
     SideBarToggle.addEventListener('click', () => {
         SideBar.classList.toggle('close')
+        const windowWidth = window.innerWidth;
         if (SideBar.classList.contains('close')) {
             Logo.style.width = '45px'
             Logo.src = '/img/register/logo.svg'
-            Content.style.width = `${ContentW + 140}px`
+            if(windowWidth <= 1580){
+                Content.style.width = `${ContentW + 80}px`
+            }else{
+                Content.style.width = `${ContentW + 120}px`
+            }
         } else {
             Logo.style.width = '125px'
             Logo.src = '/img/Logo.svg'
-            Content.style.width = `${ContentW - 140}px`
+            if(windowWidth <= 1580){
+                Content.style.width = `${ContentW - 20}px`
+            }else{
+                Content.style.width = `${ContentW - 120}px`
+            }
         }
     })
 
