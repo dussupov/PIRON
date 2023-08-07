@@ -131,6 +131,7 @@ window.addEventListener('load', () => {
             }
         } else if (contentFormSelectRole.classList.contains('swiper-slide-active')) {
             const current = checkSelectRoleCheck()
+            console.log(current)
             if (current.length > 0){
                 const item = contentInfobarItems[1].querySelector('.content-infobar__content')
                 contentInfobarItems[1].classList.add('full')
@@ -142,7 +143,7 @@ window.addEventListener('load', () => {
                             <span>Роль:</span>
                         </div>
                         <div class="content-infobar__content-value">
-                            <span>${e}</span>
+                            <span>${e.value}</span>
                         </div>
                     </div>
                 `
@@ -167,7 +168,7 @@ window.addEventListener('load', () => {
                             <span>Роль:</span>
                         </div>
                         <div class="content-infobar__content-value">
-                            <span>${e}</span>
+                            <span>${e.value}</span>
                         </div>
                     </div>
                 `
@@ -191,10 +192,10 @@ window.addEventListener('load', () => {
                 e.querySelector('input').checked = false
             }
         })
-        e.querySelector('img').addEventListener('mouseenter', ()=>{
+        e.querySelector('.content-form__selectRole-item__img').addEventListener('mouseover', ()=>{
             e.querySelector('.content-form__item-help').classList.add('active')
         })
-        e.querySelector('img').addEventListener('mouseleave', ()=>{
+        e.querySelector('.content-form__selectRole-item__img').addEventListener('mouseout', ()=>{
             e.querySelector('.content-form__item-help').classList.remove('active')
         })
     })
@@ -237,12 +238,16 @@ window.addEventListener('load', () => {
         return { current, error };
     }
 
+    // console.log(contentFormSelectRole)
+
     const checkSelectRoleCheck = () =>{
         const current = []
-        const input = contentFormSelectRole.querySelectorAll('input')
-        input.forEach(e =>{
-            if(e.checked){
-                current.push(e.name)
+        contentFormSelectRoleItem.forEach(e =>{
+            const input = e.querySelector('input')
+            const label = e.querySelector('label')
+            if(input.checked){
+                const currentItem = { id: input.name, value: label.innerText }
+                current.push(currentItem)
             }
         })
 
@@ -251,10 +256,12 @@ window.addEventListener('load', () => {
 
     const checkOPFCheck = () =>{
         const current = []
-        const input = contentFormOPF.querySelectorAll('input')
-        input.forEach(e =>{
-            if(e.checked){
-                current.push(e.name)
+        contentFormSelectORFItem.forEach(e =>{
+            const input = e.querySelector('input')
+            const label = e.querySelector('label')
+            if(input.checked){
+                const currentItem = { id: input.name, value: label.innerText }
+                current.push(currentItem)
             }
         })
 

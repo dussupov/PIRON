@@ -557,7 +557,7 @@ main {
                             .content-form__selectRole-item,
                             .content-form__OPF-item {
                                 position: relative;
-                                padding: 15px 20px;
+                                padding: 13px 20px;
                                 border: 1px solid #6B7177;
                                 border-radius: 5px;
                                 position: relative;
@@ -568,19 +568,47 @@ main {
                                 transition: all .2s ease;
                                 cursor: pointer;
 
+                                img{
+                                    position: absolute;
+                                    width: 25px;
+                                    height: 25px;
+                                    opacity: 1;
+                                    right: 25px;
+                                    z-index: 1;
+                                    transition: all 0.1s ease;
+                                }
+
                                 .content-form__item-help {
                                     position: absolute;
                                     top: 0;
                                     left: 0;
                                     background-color: #464E60;
                                     width: 100%;
+                                    z-index: 4;
+                                }
+                                .content-form__item-help__block{
+                                    position: absolute;
+                                    right: 20px;
+                                    width: 30px;
+                                    height: 30px;
+                                    opacity: 0;
+                                    visibility: hidden;
+                                    transition: all .4 ease;
                                 }
 
                                 .content-form__selectRole-item__img{
                                     position: absolute;
                                     right: 20px;
+                                    width: 30px;
+                                    height: 30px;
                                     cursor: pointer;
+                                    display: flex;
+                                    align-items: center;
+                                    z-index: 5;
+                                    justify-content: center;
                                 }
+
+                                
 
                                 input {
                                     cursor: pointer;
@@ -622,15 +650,14 @@ main {
                                 }
 
                                 label {
-                                    position: relative;
-
                                     &::after {
                                         content: "";
                                         display: block;
                                         position: absolute;
-                                        left: -50%;
-                                        top: 0;
-                                        height: 100%;
+                                        left: 17%;
+                                        transform: translateY(-50%);
+                                        top: 50%;
+                                        height: 50%;
                                         width: 1px;
                                         background-color: #6B7177;
                                     }
@@ -658,13 +685,8 @@ main {
                                     background-color: #464E60;
                                     width: 101%;
                                     padding: 15px 20px;
-                                    z-index: 2;
                                     border-radius: 5px;
                                     transition: all .4s ease;
-                                    img{
-                                        top: 17px;
-                                        right: 22px;
-                                    }
                                     .content-form__item-help__title{
                                         font-family: 'Artifakt-Bold', sans-serif;
                                         padding-bottom: 5px;

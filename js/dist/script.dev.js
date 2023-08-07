@@ -130,13 +130,15 @@ window.addEventListener('load', function () {
     } else if (contentFormSelectRole.classList.contains('swiper-slide-active')) {
       var _current = checkSelectRoleCheck();
 
+      console.log(_current);
+
       if (_current.length > 0) {
         var _item = contentInfobarItems[1].querySelector('.content-infobar__content');
 
         contentInfobarItems[1].classList.add('full');
 
         _current.forEach(function (e) {
-          _item.innerHTML += "\n                    <div class=\"content-infobar__content-item\">\n                        <div class=\"content-infobar__content-name\">\n                            <span>\u0420\u043E\u043B\u044C:</span>\n                        </div>\n                        <div class=\"content-infobar__content-value\">\n                            <span>".concat(e, "</span>\n                        </div>\n                    </div>\n                ");
+          _item.innerHTML += "\n                    <div class=\"content-infobar__content-item\">\n                        <div class=\"content-infobar__content-name\">\n                            <span>\u0420\u043E\u043B\u044C:</span>\n                        </div>\n                        <div class=\"content-infobar__content-value\">\n                            <span>".concat(e.value, "</span>\n                        </div>\n                    </div>\n                ");
         });
 
         swiper.slideNext();
@@ -154,7 +156,7 @@ window.addEventListener('load', function () {
         contentInfobarItems[2].classList.add('full');
 
         _current2.forEach(function (e) {
-          _item2.innerHTML += "\n                    <div class=\"content-infobar__content-item\">\n                        <div class=\"content-infobar__content-name\">\n                            <span>\u0420\u043E\u043B\u044C:</span>\n                        </div>\n                        <div class=\"content-infobar__content-value\">\n                            <span>".concat(e, "</span>\n                        </div>\n                    </div>\n                ");
+          _item2.innerHTML += "\n                    <div class=\"content-infobar__content-item\">\n                        <div class=\"content-infobar__content-name\">\n                            <span>\u0420\u043E\u043B\u044C:</span>\n                        </div>\n                        <div class=\"content-infobar__content-value\">\n                            <span>".concat(e.value, "</span>\n                        </div>\n                    </div>\n                ");
         });
 
         swiper.slideNext();
@@ -175,10 +177,10 @@ window.addEventListener('load', function () {
         e.querySelector('input').checked = false;
       }
     });
-    e.querySelector('img').addEventListener('mouseenter', function () {
+    e.querySelector('.content-form__selectRole-item__img').addEventListener('mouseover', function () {
       e.querySelector('.content-form__item-help').classList.add('active');
     });
-    e.querySelector('img').addEventListener('mouseleave', function () {
+    e.querySelector('.content-form__selectRole-item__img').addEventListener('mouseout', function () {
       e.querySelector('.content-form__item-help').classList.remove('active');
     });
   });
@@ -230,14 +232,21 @@ window.addEventListener('load', function () {
       current: current,
       error: error
     };
-  };
+  }; // console.log(contentFormSelectRole)
+
 
   var checkSelectRoleCheck = function checkSelectRoleCheck() {
     var current = [];
-    var input = contentFormSelectRole.querySelectorAll('input');
-    input.forEach(function (e) {
-      if (e.checked) {
-        current.push(e.name);
+    contentFormSelectRoleItem.forEach(function (e) {
+      var input = e.querySelector('input');
+      var label = e.querySelector('label');
+
+      if (input.checked) {
+        var currentItem = {
+          id: input.name,
+          value: label.innerText
+        };
+        current.push(currentItem);
       }
     });
     return current;
@@ -245,10 +254,16 @@ window.addEventListener('load', function () {
 
   var checkOPFCheck = function checkOPFCheck() {
     var current = [];
-    var input = contentFormOPF.querySelectorAll('input');
-    input.forEach(function (e) {
-      if (e.checked) {
-        current.push(e.name);
+    contentFormSelectORFItem.forEach(function (e) {
+      var input = e.querySelector('input');
+      var label = e.querySelector('label');
+
+      if (input.checked) {
+        var currentItem = {
+          id: input.name,
+          value: label.innerText
+        };
+        current.push(currentItem);
       }
     });
     return current;
