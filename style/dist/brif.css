@@ -1,15 +1,15 @@
 @charset "UTF-8";
-.content .content-main {
+.brif .content .content-main {
   margin-top: 25px;
   display: flex;
   height: 90%;
   justify-content: space-between;
 }
-.content .content-main .content-forms {
+.brif .content .content-main .content-forms {
   width: 68%;
   position: relative;
 }
-.content .content-main .content-forms .content-form__bar .content-form__bar-items {
+.brif .content .content-main .content-forms .content-form__bar .content-form__bar-items {
   display: flex;
   background: #464E60;
   padding: 20px;
@@ -17,7 +17,7 @@
   gap: 110px;
   border-radius: 5px;
 }
-.content .content-main .content-forms .content-form__bar .content-form__bar-items .content-form__bar-item {
+.brif .content .content-main .content-forms .content-form__bar .content-form__bar-items .content-form__bar-item {
   display: flex;
   position: relative;
   height: 36px;
@@ -29,11 +29,11 @@
   transition: all 0.6s ease;
 }
 @media screen and (max-width: 1580px) {
-  .content .content-main .content-forms .content-form__bar .content-form__bar-items .content-form__bar-item {
+  .brif .content .content-main .content-forms .content-form__bar .content-form__bar-items .content-form__bar-item {
     font-size: 11px;
   }
 }
-.content .content-main .content-forms .content-form__bar .content-form__bar-items .content-form__bar-item::after {
+.brif .content .content-main .content-forms .content-form__bar .content-form__bar-items .content-form__bar-item::after {
   content: "";
   position: absolute;
   width: 70px;
@@ -41,7 +41,7 @@
   background-color: white;
   right: 110%;
 }
-.content .content-main .content-forms .content-form__bar .content-form__bar-items .content-form__bar-item:first-child::after {
+.brif .content .content-main .content-forms .content-form__bar .content-form__bar-items .content-form__bar-item:first-child::after {
   content: "";
   display: none;
   position: absolute;
@@ -50,13 +50,13 @@
   background-color: white;
   right: 110%;
 }
-.content .content-main .content-forms .content-form__bar .content-form__bar-items .content-form__bar-item.disable {
+.brif .content .content-main .content-forms .content-form__bar .content-form__bar-items .content-form__bar-item.disable {
   opacity: 0.3;
 }
-.content .content-main .content-forms .content-form__bar .content-form__bar-items .content-form__bar-item.success {
+.brif .content .content-main .content-forms .content-form__bar .content-form__bar-items .content-form__bar-item.success {
   border: 1px solid #33C078;
 }
-.content .content-main .content-forms .content-form__bar .content-form__bar-items .content-form__bar-item.success::after {
+.brif .content .content-main .content-forms .content-form__bar .content-form__bar-items .content-form__bar-item.success::after {
   content: "";
   position: absolute;
   width: 70px;
@@ -64,43 +64,43 @@
   background-color: #33C078;
   right: 110%;
 }
-.content .content-main .content-forms .content-form {
+.brif .content .content-main .content-forms .content-form {
   overflow: hidden;
 }
-.content .content-main .content-forms .content-form .content-form__items {
+.brif .content .content-main .content-forms .content-form .content-form__items {
   display: flex;
   transition: all 0.6s ease;
 }
-.content .content-main .content-forms .content-form .content-form__items .content-form__welcome,
-.content .content-main .content-forms .content-form .content-form__items .content-form__end {
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__welcome,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__end {
   margin-top: 40px;
   padding-right: 35%;
 }
 @media screen and (max-width: 1580px) {
-  .content .content-main .content-forms .content-form .content-form__items .content-form__welcome,
-.content .content-main .content-forms .content-form .content-form__items .content-form__end {
+  .brif .content .content-main .content-forms .content-form .content-form__items .content-form__welcome,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__end {
     padding-right: 15%;
   }
 }
-.content .content-main .content-forms .content-form .content-form__items .content-form__welcome .content-form__welcome-title,
-.content .content-main .content-forms .content-form .content-form__items .content-form__welcome .content-form__end-title,
-.content .content-main .content-forms .content-form .content-form__items .content-form__end .content-form__welcome-title,
-.content .content-main .content-forms .content-form .content-form__items .content-form__end .content-form__end-title {
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__welcome .content-form__welcome-title,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__welcome .content-form__end-title,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__end .content-form__welcome-title,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__end .content-form__end-title {
   font-family: "Artifakt-Bold", sans-serif;
   margin-bottom: 30px;
   font-size: 18px;
 }
-.content .content-main .content-forms .content-form .content-form__items .content-form__welcome .content-form__gratitude,
-.content .content-main .content-forms .content-form .content-form__items .content-form__end .content-form__gratitude {
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__welcome .content-form__gratitude,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__end .content-form__gratitude {
   font-size: 14px;
   color: #8AD6F0;
   line-height: 140%;
   margin-bottom: 30px;
 }
-.content .content-main .content-forms .content-form .content-form__items .content-form__welcome .content-form__welcome-btn button,
-.content .content-main .content-forms .content-form .content-form__items .content-form__welcome .content-form__end-btn button,
-.content .content-main .content-forms .content-form .content-form__items .content-form__end .content-form__welcome-btn button,
-.content .content-main .content-forms .content-form .content-form__items .content-form__end .content-form__end-btn button {
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__welcome .content-form__welcome-btn button,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__welcome .content-form__end-btn button,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__end .content-form__welcome-btn button,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__end .content-form__end-btn button {
   background-color: #464E60;
   border: none;
   outline: none;
@@ -110,17 +110,17 @@
   font-size: 18px;
   position: relative;
 }
-.content .content-main .content-forms .content-form .content-form__items .content-form__welcome .content-form__welcome-btn button span,
-.content .content-main .content-forms .content-form .content-form__items .content-form__welcome .content-form__end-btn button span,
-.content .content-main .content-forms .content-form .content-form__items .content-form__end .content-form__welcome-btn button span,
-.content .content-main .content-forms .content-form .content-form__items .content-form__end .content-form__end-btn button span {
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__welcome .content-form__welcome-btn button span,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__welcome .content-form__end-btn button span,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__end .content-form__welcome-btn button span,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__end .content-form__end-btn button span {
   position: relative;
   z-index: 2;
 }
-.content .content-main .content-forms .content-form .content-form__items .content-form__welcome .content-form__welcome-btn button::after,
-.content .content-main .content-forms .content-form .content-form__items .content-form__welcome .content-form__end-btn button::after,
-.content .content-main .content-forms .content-form .content-form__items .content-form__end .content-form__welcome-btn button::after,
-.content .content-main .content-forms .content-form .content-form__items .content-form__end .content-form__end-btn button::after {
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__welcome .content-form__welcome-btn button::after,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__welcome .content-form__end-btn button::after,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__end .content-form__welcome-btn button::after,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__end .content-form__end-btn button::after {
   content: "";
   width: 0;
   height: 100%;
@@ -132,51 +132,51 @@
   z-index: 1;
   transition: all 0.2s ease;
 }
-.content .content-main .content-forms .content-form .content-form__items .content-form__welcome .content-form__welcome-btn button:hover::after,
-.content .content-main .content-forms .content-form .content-form__items .content-form__welcome .content-form__end-btn button:hover::after,
-.content .content-main .content-forms .content-form .content-form__items .content-form__end .content-form__welcome-btn button:hover::after,
-.content .content-main .content-forms .content-form .content-form__items .content-form__end .content-form__end-btn button:hover::after {
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__welcome .content-form__welcome-btn button:hover::after,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__welcome .content-form__end-btn button:hover::after,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__end .content-form__welcome-btn button:hover::after,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__end .content-form__end-btn button:hover::after {
   width: 100%;
 }
-.content .content-main .content-forms .content-form .content-form__items .content-form__welcome .content-form__end-subtitle,
-.content .content-main .content-forms .content-form .content-form__items .content-form__welcome .content-form__welcome-subtitle,
-.content .content-main .content-forms .content-form .content-form__items .content-form__end .content-form__end-subtitle,
-.content .content-main .content-forms .content-form .content-form__items .content-form__end .content-form__welcome-subtitle {
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__welcome .content-form__end-subtitle,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__welcome .content-form__welcome-subtitle,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__end .content-form__end-subtitle,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__end .content-form__welcome-subtitle {
   font-size: 18px;
   width: 90%;
   margin-bottom: 30px;
 }
-.content .content-main .content-forms .content-form .content-form__items .content-form__acquaintance {
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__acquaintance {
   min-width: 100%;
   margin-top: 40px;
 }
-.content .content-main .content-forms .content-form .content-form__items .content-form__acquaintance .content-form__acquaintance-title {
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__acquaintance .content-form__acquaintance-title {
   display: flex;
   align-items: center;
   gap: 20px;
   font-family: "Artifakt-Bold", sans-serif;
   margin-bottom: 30px;
 }
-.content .content-main .content-forms .content-form .content-form__items .content-form__acquaintance .content-form__acquaintance-title img {
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__acquaintance .content-form__acquaintance-title img {
   width: 44px;
   height: 44px;
 }
-.content .content-main .content-forms .content-form .content-form__items .content-form__acquaintance .content-form__acquaintance-title h1 {
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__acquaintance .content-form__acquaintance-title h1 {
   margin-bottom: 0;
 }
-.content .content-main .content-forms .content-form .content-form__items .content-form__acquaintance .content-form__acquaintance-subtitle {
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__acquaintance .content-form__acquaintance-subtitle {
   font-size: 18px;
 }
-.content .content-main .content-forms .content-form .content-form__items .content-form__acquaintance .content-form__acquaintance-form {
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__acquaintance .content-form__acquaintance-form {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   padding-right: 20px;
   justify-content: space-between;
 }
-.content .content-main .content-forms .content-form .content-form__items .content-form__acquaintance .content-form__acquaintance-form .content-form__acquaintance__name,
-.content .content-main .content-forms .content-form .content-form__items .content-form__acquaintance .content-form__acquaintance-form .content-form__acquaintance__country,
-.content .content-main .content-forms .content-form .content-form__items .content-form__acquaintance .content-form__acquaintance-form .content-form__acquaintance__city {
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__acquaintance .content-form__acquaintance-form .content-form__acquaintance__name,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__acquaintance .content-form__acquaintance-form .content-form__acquaintance__country,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__acquaintance .content-form__acquaintance-form .content-form__acquaintance__city {
   position: relative;
   margin-top: 40px;
   width: 47%;
@@ -184,22 +184,22 @@
   display: flex;
   flex-direction: column;
 }
-.content .content-main .content-forms .content-form .content-form__items .content-form__acquaintance .content-form__acquaintance-form .content-form__acquaintance__name label,
-.content .content-main .content-forms .content-form .content-form__items .content-form__acquaintance .content-form__acquaintance-form .content-form__acquaintance__country label,
-.content .content-main .content-forms .content-form .content-form__items .content-form__acquaintance .content-form__acquaintance-form .content-form__acquaintance__city label {
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__acquaintance .content-form__acquaintance-form .content-form__acquaintance__name label,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__acquaintance .content-form__acquaintance-form .content-form__acquaintance__country label,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__acquaintance .content-form__acquaintance-form .content-form__acquaintance__city label {
   color: #F8FEFE;
 }
-.content .content-main .content-forms .content-form .content-form__items .content-form__acquaintance .content-form__acquaintance-form .content-form__acquaintance__name label span,
-.content .content-main .content-forms .content-form .content-form__items .content-form__acquaintance .content-form__acquaintance-form .content-form__acquaintance__country label span,
-.content .content-main .content-forms .content-form .content-form__items .content-form__acquaintance .content-form__acquaintance-form .content-form__acquaintance__city label span {
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__acquaintance .content-form__acquaintance-form .content-form__acquaintance__name label span,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__acquaintance .content-form__acquaintance-form .content-form__acquaintance__country label span,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__acquaintance .content-form__acquaintance-form .content-form__acquaintance__city label span {
   color: #FED578;
 }
-.content .content-main .content-forms .content-form .content-form__items .content-form__acquaintance .content-form__acquaintance-form .content-form__acquaintance__name input,
-.content .content-main .content-forms .content-form .content-form__items .content-form__acquaintance .content-form__acquaintance-form .content-form__acquaintance__name select,
-.content .content-main .content-forms .content-form .content-form__items .content-form__acquaintance .content-form__acquaintance-form .content-form__acquaintance__country input,
-.content .content-main .content-forms .content-form .content-form__items .content-form__acquaintance .content-form__acquaintance-form .content-form__acquaintance__country select,
-.content .content-main .content-forms .content-form .content-form__items .content-form__acquaintance .content-form__acquaintance-form .content-form__acquaintance__city input,
-.content .content-main .content-forms .content-form .content-form__items .content-form__acquaintance .content-form__acquaintance-form .content-form__acquaintance__city select {
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__acquaintance .content-form__acquaintance-form .content-form__acquaintance__name input,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__acquaintance .content-form__acquaintance-form .content-form__acquaintance__name select,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__acquaintance .content-form__acquaintance-form .content-form__acquaintance__country input,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__acquaintance .content-form__acquaintance-form .content-form__acquaintance__country select,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__acquaintance .content-form__acquaintance-form .content-form__acquaintance__city input,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__acquaintance .content-form__acquaintance-form .content-form__acquaintance__city select {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -214,51 +214,51 @@
   color: #6B7177;
   transition: all 0.4s ease;
 }
-.content .content-main .content-forms .content-form .content-form__items .content-form__acquaintance .content-form__acquaintance-form .content-form__acquaintance__name input::placeholder,
-.content .content-main .content-forms .content-form .content-form__items .content-form__acquaintance .content-form__acquaintance-form .content-form__acquaintance__name select::placeholder,
-.content .content-main .content-forms .content-form .content-form__items .content-form__acquaintance .content-form__acquaintance-form .content-form__acquaintance__country input::placeholder,
-.content .content-main .content-forms .content-form .content-form__items .content-form__acquaintance .content-form__acquaintance-form .content-form__acquaintance__country select::placeholder,
-.content .content-main .content-forms .content-form .content-form__items .content-form__acquaintance .content-form__acquaintance-form .content-form__acquaintance__city input::placeholder,
-.content .content-main .content-forms .content-form .content-form__items .content-form__acquaintance .content-form__acquaintance-form .content-form__acquaintance__city select::placeholder {
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__acquaintance .content-form__acquaintance-form .content-form__acquaintance__name input::placeholder,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__acquaintance .content-form__acquaintance-form .content-form__acquaintance__name select::placeholder,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__acquaintance .content-form__acquaintance-form .content-form__acquaintance__country input::placeholder,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__acquaintance .content-form__acquaintance-form .content-form__acquaintance__country select::placeholder,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__acquaintance .content-form__acquaintance-form .content-form__acquaintance__city input::placeholder,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__acquaintance .content-form__acquaintance-form .content-form__acquaintance__city select::placeholder {
   color: #6B7177;
   font-size: 16px;
   font-weight: 400;
 }
-.content .content-main .content-forms .content-form .content-form__items .content-form__acquaintance .content-form__acquaintance-form .content-form__acquaintance__name input:focus,
-.content .content-main .content-forms .content-form .content-form__items .content-form__acquaintance .content-form__acquaintance-form .content-form__acquaintance__name select:focus,
-.content .content-main .content-forms .content-form .content-form__items .content-form__acquaintance .content-form__acquaintance-form .content-form__acquaintance__country input:focus,
-.content .content-main .content-forms .content-form .content-form__items .content-form__acquaintance .content-form__acquaintance-form .content-form__acquaintance__country select:focus,
-.content .content-main .content-forms .content-form .content-form__items .content-form__acquaintance .content-form__acquaintance-form .content-form__acquaintance__city input:focus,
-.content .content-main .content-forms .content-form .content-form__items .content-form__acquaintance .content-form__acquaintance-form .content-form__acquaintance__city select:focus {
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__acquaintance .content-form__acquaintance-form .content-form__acquaintance__name input:focus,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__acquaintance .content-form__acquaintance-form .content-form__acquaintance__name select:focus,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__acquaintance .content-form__acquaintance-form .content-form__acquaintance__country input:focus,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__acquaintance .content-form__acquaintance-form .content-form__acquaintance__country select:focus,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__acquaintance .content-form__acquaintance-form .content-form__acquaintance__city input:focus,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__acquaintance .content-form__acquaintance-form .content-form__acquaintance__city select:focus {
   color: #6B7177;
 }
-.content .content-main .content-forms .content-form .content-form__items .content-form__acquaintance .content-form__acquaintance-form .content-form__acquaintance__name input.err,
-.content .content-main .content-forms .content-form .content-form__items .content-form__acquaintance .content-form__acquaintance-form .content-form__acquaintance__name select.err,
-.content .content-main .content-forms .content-form .content-form__items .content-form__acquaintance .content-form__acquaintance-form .content-form__acquaintance__country input.err,
-.content .content-main .content-forms .content-form .content-form__items .content-form__acquaintance .content-form__acquaintance-form .content-form__acquaintance__country select.err,
-.content .content-main .content-forms .content-form .content-form__items .content-form__acquaintance .content-form__acquaintance-form .content-form__acquaintance__city input.err,
-.content .content-main .content-forms .content-form .content-form__items .content-form__acquaintance .content-form__acquaintance-form .content-form__acquaintance__city select.err {
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__acquaintance .content-form__acquaintance-form .content-form__acquaintance__name input.err,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__acquaintance .content-form__acquaintance-form .content-form__acquaintance__name select.err,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__acquaintance .content-form__acquaintance-form .content-form__acquaintance__country input.err,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__acquaintance .content-form__acquaintance-form .content-form__acquaintance__country select.err,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__acquaintance .content-form__acquaintance-form .content-form__acquaintance__city input.err,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__acquaintance .content-form__acquaintance-form .content-form__acquaintance__city select.err {
   border: 1px solid red;
 }
-.content .content-main .content-forms .content-form .content-form__items .content-form__acquaintance .content-form__acquaintance-form .content-form__acquaintance__name select,
-.content .content-main .content-forms .content-form .content-form__items .content-form__acquaintance .content-form__acquaintance-form .content-form__acquaintance__country select,
-.content .content-main .content-forms .content-form .content-form__items .content-form__acquaintance .content-form__acquaintance-form .content-form__acquaintance__city select {
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__acquaintance .content-form__acquaintance-form .content-form__acquaintance__name select,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__acquaintance .content-form__acquaintance-form .content-form__acquaintance__country select,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__acquaintance .content-form__acquaintance-form .content-form__acquaintance__city select {
   background-image: url("/img/brif/angle-down.svg");
   background-repeat: no-repeat;
   background-position: right 20px center;
   padding-right: 20px;
   /* Добавьте отступ справа, чтобы избежать перекрытия текста и стрелки */
 }
-.content .content-main .content-forms .content-form .content-form__items .content-form__selectRole,
-.content .content-main .content-forms .content-form .content-form__items .content-form__OPF {
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__selectRole,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__OPF {
   margin-top: 40px;
   min-width: 100%;
   padding-right: 20px;
 }
-.content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__selectRole-title,
-.content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__OPF-title,
-.content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__selectRole-title,
-.content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__OPF-title {
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__selectRole-title,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__OPF-title,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__selectRole-title,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__OPF-title {
   display: flex;
   font-family: "Artifakt-Bold", sans-serif;
   align-items: center;
@@ -266,36 +266,36 @@
   gap: 20px;
   margin-bottom: 30px;
 }
-.content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__selectRole-title img,
-.content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__OPF-title img,
-.content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__selectRole-title img,
-.content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__OPF-title img {
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__selectRole-title img,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__OPF-title img,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__selectRole-title img,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__OPF-title img {
   width: 44px;
   height: 44px;
 }
-.content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__selectRole-title h1,
-.content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__OPF-title h1,
-.content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__selectRole-title h1,
-.content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__OPF-title h1 {
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__selectRole-title h1,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__OPF-title h1,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__selectRole-title h1,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__OPF-title h1 {
   margin-bottom: 0;
 }
-.content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__selectRole-items,
-.content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__OPF-items,
-.content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__selectRole-items,
-.content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__OPF-items {
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__selectRole-items,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__OPF-items,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__selectRole-items,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__OPF-items {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 15px;
 }
-.content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__selectRole-items .content-form__selectRole-item,
-.content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__selectRole-items .content-form__OPF-item,
-.content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__OPF-items .content-form__selectRole-item,
-.content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__OPF-items .content-form__OPF-item,
-.content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__selectRole-items .content-form__selectRole-item,
-.content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__selectRole-items .content-form__OPF-item,
-.content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__OPF-items .content-form__selectRole-item,
-.content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__OPF-items .content-form__OPF-item {
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__selectRole-items .content-form__selectRole-item,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__selectRole-items .content-form__OPF-item,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__OPF-items .content-form__selectRole-item,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__OPF-items .content-form__OPF-item,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__selectRole-items .content-form__selectRole-item,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__selectRole-items .content-form__OPF-item,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__OPF-items .content-form__selectRole-item,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__OPF-items .content-form__OPF-item {
   position: relative;
   padding: 13px 20px;
   border: 1px solid #6B7177;
@@ -308,14 +308,14 @@
   transition: all 0.2s ease;
   cursor: pointer;
 }
-.content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__selectRole-items .content-form__selectRole-item img,
-.content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__selectRole-items .content-form__OPF-item img,
-.content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__OPF-items .content-form__selectRole-item img,
-.content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__OPF-items .content-form__OPF-item img,
-.content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__selectRole-items .content-form__selectRole-item img,
-.content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__selectRole-items .content-form__OPF-item img,
-.content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__OPF-items .content-form__selectRole-item img,
-.content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__OPF-items .content-form__OPF-item img {
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__selectRole-items .content-form__selectRole-item img,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__selectRole-items .content-form__OPF-item img,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__OPF-items .content-form__selectRole-item img,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__OPF-items .content-form__OPF-item img,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__selectRole-items .content-form__selectRole-item img,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__selectRole-items .content-form__OPF-item img,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__OPF-items .content-form__selectRole-item img,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__OPF-items .content-form__OPF-item img {
   position: absolute;
   width: 25px;
   height: 25px;
@@ -324,14 +324,14 @@
   z-index: 1;
   transition: all 0.1s ease;
 }
-.content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__selectRole-items .content-form__selectRole-item .content-form__item-help,
-.content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__selectRole-items .content-form__OPF-item .content-form__item-help,
-.content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__OPF-items .content-form__selectRole-item .content-form__item-help,
-.content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__OPF-items .content-form__OPF-item .content-form__item-help,
-.content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__selectRole-items .content-form__selectRole-item .content-form__item-help,
-.content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__selectRole-items .content-form__OPF-item .content-form__item-help,
-.content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__OPF-items .content-form__selectRole-item .content-form__item-help,
-.content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__OPF-items .content-form__OPF-item .content-form__item-help {
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__selectRole-items .content-form__selectRole-item .content-form__item-help,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__selectRole-items .content-form__OPF-item .content-form__item-help,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__OPF-items .content-form__selectRole-item .content-form__item-help,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__OPF-items .content-form__OPF-item .content-form__item-help,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__selectRole-items .content-form__selectRole-item .content-form__item-help,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__selectRole-items .content-form__OPF-item .content-form__item-help,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__OPF-items .content-form__selectRole-item .content-form__item-help,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__OPF-items .content-form__OPF-item .content-form__item-help {
   position: absolute;
   top: 0;
   left: 0;
@@ -339,14 +339,14 @@
   width: 100%;
   z-index: 4;
 }
-.content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__selectRole-items .content-form__selectRole-item .content-form__item-help__block,
-.content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__selectRole-items .content-form__OPF-item .content-form__item-help__block,
-.content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__OPF-items .content-form__selectRole-item .content-form__item-help__block,
-.content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__OPF-items .content-form__OPF-item .content-form__item-help__block,
-.content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__selectRole-items .content-form__selectRole-item .content-form__item-help__block,
-.content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__selectRole-items .content-form__OPF-item .content-form__item-help__block,
-.content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__OPF-items .content-form__selectRole-item .content-form__item-help__block,
-.content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__OPF-items .content-form__OPF-item .content-form__item-help__block {
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__selectRole-items .content-form__selectRole-item .content-form__item-help__block,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__selectRole-items .content-form__OPF-item .content-form__item-help__block,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__OPF-items .content-form__selectRole-item .content-form__item-help__block,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__OPF-items .content-form__OPF-item .content-form__item-help__block,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__selectRole-items .content-form__selectRole-item .content-form__item-help__block,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__selectRole-items .content-form__OPF-item .content-form__item-help__block,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__OPF-items .content-form__selectRole-item .content-form__item-help__block,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__OPF-items .content-form__OPF-item .content-form__item-help__block {
   position: absolute;
   right: 20px;
   width: 30px;
@@ -355,14 +355,14 @@
   visibility: hidden;
   transition: all 0.4 ease;
 }
-.content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__selectRole-items .content-form__selectRole-item .content-form__selectRole-item__img,
-.content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__selectRole-items .content-form__OPF-item .content-form__selectRole-item__img,
-.content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__OPF-items .content-form__selectRole-item .content-form__selectRole-item__img,
-.content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__OPF-items .content-form__OPF-item .content-form__selectRole-item__img,
-.content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__selectRole-items .content-form__selectRole-item .content-form__selectRole-item__img,
-.content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__selectRole-items .content-form__OPF-item .content-form__selectRole-item__img,
-.content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__OPF-items .content-form__selectRole-item .content-form__selectRole-item__img,
-.content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__OPF-items .content-form__OPF-item .content-form__selectRole-item__img {
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__selectRole-items .content-form__selectRole-item .content-form__selectRole-item__img,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__selectRole-items .content-form__OPF-item .content-form__selectRole-item__img,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__OPF-items .content-form__selectRole-item .content-form__selectRole-item__img,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__OPF-items .content-form__OPF-item .content-form__selectRole-item__img,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__selectRole-items .content-form__selectRole-item .content-form__selectRole-item__img,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__selectRole-items .content-form__OPF-item .content-form__selectRole-item__img,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__OPF-items .content-form__selectRole-item .content-form__selectRole-item__img,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__OPF-items .content-form__OPF-item .content-form__selectRole-item__img {
   position: absolute;
   right: 20px;
   width: 30px;
@@ -373,14 +373,14 @@
   z-index: 5;
   justify-content: center;
 }
-.content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__selectRole-items .content-form__selectRole-item input,
-.content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__selectRole-items .content-form__OPF-item input,
-.content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__OPF-items .content-form__selectRole-item input,
-.content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__OPF-items .content-form__OPF-item input,
-.content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__selectRole-items .content-form__selectRole-item input,
-.content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__selectRole-items .content-form__OPF-item input,
-.content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__OPF-items .content-form__selectRole-item input,
-.content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__OPF-items .content-form__OPF-item input {
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__selectRole-items .content-form__selectRole-item input,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__selectRole-items .content-form__OPF-item input,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__OPF-items .content-form__selectRole-item input,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__OPF-items .content-form__OPF-item input,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__selectRole-items .content-form__selectRole-item input,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__selectRole-items .content-form__OPF-item input,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__OPF-items .content-form__selectRole-item input,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__OPF-items .content-form__OPF-item input {
   cursor: pointer;
   position: relative;
   width: 24px;
@@ -391,14 +391,14 @@
   border: 1px solid #4D5359;
   border-radius: 4px;
 }
-.content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__selectRole-items .content-form__selectRole-item input:checked::before,
-.content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__selectRole-items .content-form__OPF-item input:checked::before,
-.content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__OPF-items .content-form__selectRole-item input:checked::before,
-.content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__OPF-items .content-form__OPF-item input:checked::before,
-.content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__selectRole-items .content-form__selectRole-item input:checked::before,
-.content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__selectRole-items .content-form__OPF-item input:checked::before,
-.content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__OPF-items .content-form__selectRole-item input:checked::before,
-.content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__OPF-items .content-form__OPF-item input:checked::before {
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__selectRole-items .content-form__selectRole-item input:checked::before,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__selectRole-items .content-form__OPF-item input:checked::before,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__OPF-items .content-form__selectRole-item input:checked::before,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__OPF-items .content-form__OPF-item input:checked::before,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__selectRole-items .content-form__selectRole-item input:checked::before,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__selectRole-items .content-form__OPF-item input:checked::before,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__OPF-items .content-form__selectRole-item input:checked::before,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__OPF-items .content-form__OPF-item input:checked::before {
   content: "";
   position: absolute;
   top: 0px;
@@ -408,14 +408,14 @@
   background-color: #2FC177;
   border-radius: 2px;
 }
-.content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__selectRole-items .content-form__selectRole-item input:checked::after,
-.content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__selectRole-items .content-form__OPF-item input:checked::after,
-.content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__OPF-items .content-form__selectRole-item input:checked::after,
-.content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__OPF-items .content-form__OPF-item input:checked::after,
-.content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__selectRole-items .content-form__selectRole-item input:checked::after,
-.content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__selectRole-items .content-form__OPF-item input:checked::after,
-.content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__OPF-items .content-form__selectRole-item input:checked::after,
-.content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__OPF-items .content-form__OPF-item input:checked::after {
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__selectRole-items .content-form__selectRole-item input:checked::after,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__selectRole-items .content-form__OPF-item input:checked::after,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__OPF-items .content-form__selectRole-item input:checked::after,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__OPF-items .content-form__OPF-item input:checked::after,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__selectRole-items .content-form__selectRole-item input:checked::after,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__selectRole-items .content-form__OPF-item input:checked::after,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__OPF-items .content-form__selectRole-item input:checked::after,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__OPF-items .content-form__OPF-item input:checked::after {
   content: "✓";
   display: inline-block;
   color: #fff;
@@ -428,14 +428,14 @@
   transform: translate(-50%, -50%) scale(1);
   transition: 0.3s;
 }
-.content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__selectRole-items .content-form__selectRole-item label::after,
-.content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__selectRole-items .content-form__OPF-item label::after,
-.content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__OPF-items .content-form__selectRole-item label::after,
-.content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__OPF-items .content-form__OPF-item label::after,
-.content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__selectRole-items .content-form__selectRole-item label::after,
-.content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__selectRole-items .content-form__OPF-item label::after,
-.content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__OPF-items .content-form__selectRole-item label::after,
-.content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__OPF-items .content-form__OPF-item label::after {
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__selectRole-items .content-form__selectRole-item label::after,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__selectRole-items .content-form__OPF-item label::after,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__OPF-items .content-form__selectRole-item label::after,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__OPF-items .content-form__OPF-item label::after,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__selectRole-items .content-form__selectRole-item label::after,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__selectRole-items .content-form__OPF-item label::after,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__OPF-items .content-form__selectRole-item label::after,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__OPF-items .content-form__OPF-item label::after {
   content: "";
   display: block;
   position: absolute;
@@ -446,45 +446,45 @@
   width: 1px;
   background-color: #6B7177;
 }
-.content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__selectRole-items .content-form__selectRole-item.active,
-.content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__selectRole-items .content-form__OPF-item.active,
-.content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__OPF-items .content-form__selectRole-item.active,
-.content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__OPF-items .content-form__OPF-item.active,
-.content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__selectRole-items .content-form__selectRole-item.active,
-.content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__selectRole-items .content-form__OPF-item.active,
-.content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__OPF-items .content-form__selectRole-item.active,
-.content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__OPF-items .content-form__OPF-item.active {
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__selectRole-items .content-form__selectRole-item.active,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__selectRole-items .content-form__OPF-item.active,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__OPF-items .content-form__selectRole-item.active,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__OPF-items .content-form__OPF-item.active,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__selectRole-items .content-form__selectRole-item.active,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__selectRole-items .content-form__OPF-item.active,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__OPF-items .content-form__selectRole-item.active,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__OPF-items .content-form__OPF-item.active {
   border: 1px solid #2FC177;
 }
-.content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__selectRole-items .content-form__selectRole-item.active label::after,
-.content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__selectRole-items .content-form__OPF-item.active label::after,
-.content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__OPF-items .content-form__selectRole-item.active label::after,
-.content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__OPF-items .content-form__OPF-item.active label::after,
-.content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__selectRole-items .content-form__selectRole-item.active label::after,
-.content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__selectRole-items .content-form__OPF-item.active label::after,
-.content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__OPF-items .content-form__selectRole-item.active label::after,
-.content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__OPF-items .content-form__OPF-item.active label::after {
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__selectRole-items .content-form__selectRole-item.active label::after,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__selectRole-items .content-form__OPF-item.active label::after,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__OPF-items .content-form__selectRole-item.active label::after,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__OPF-items .content-form__OPF-item.active label::after,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__selectRole-items .content-form__selectRole-item.active label::after,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__selectRole-items .content-form__OPF-item.active label::after,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__OPF-items .content-form__selectRole-item.active label::after,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__OPF-items .content-form__OPF-item.active label::after {
   background-color: #fff;
 }
-.content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__selectRole-items .content-form__selectRole-item.disable,
-.content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__selectRole-items .content-form__OPF-item.disable,
-.content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__OPF-items .content-form__selectRole-item.disable,
-.content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__OPF-items .content-form__OPF-item.disable,
-.content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__selectRole-items .content-form__selectRole-item.disable,
-.content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__selectRole-items .content-form__OPF-item.disable,
-.content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__OPF-items .content-form__selectRole-item.disable,
-.content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__OPF-items .content-form__OPF-item.disable {
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__selectRole-items .content-form__selectRole-item.disable,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__selectRole-items .content-form__OPF-item.disable,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__OPF-items .content-form__selectRole-item.disable,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__OPF-items .content-form__OPF-item.disable,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__selectRole-items .content-form__selectRole-item.disable,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__selectRole-items .content-form__OPF-item.disable,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__OPF-items .content-form__selectRole-item.disable,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__OPF-items .content-form__OPF-item.disable {
   pointer-events: none;
   opacity: 0.3;
 }
-.content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__selectRole-items .content-form__selectRole-item .content-form__item-help,
-.content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__selectRole-items .content-form__OPF-item .content-form__item-help,
-.content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__OPF-items .content-form__selectRole-item .content-form__item-help,
-.content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__OPF-items .content-form__OPF-item .content-form__item-help,
-.content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__selectRole-items .content-form__selectRole-item .content-form__item-help,
-.content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__selectRole-items .content-form__OPF-item .content-form__item-help,
-.content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__OPF-items .content-form__selectRole-item .content-form__item-help,
-.content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__OPF-items .content-form__OPF-item .content-form__item-help {
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__selectRole-items .content-form__selectRole-item .content-form__item-help,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__selectRole-items .content-form__OPF-item .content-form__item-help,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__OPF-items .content-form__selectRole-item .content-form__item-help,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__OPF-items .content-form__OPF-item .content-form__item-help,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__selectRole-items .content-form__selectRole-item .content-form__item-help,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__selectRole-items .content-form__OPF-item .content-form__item-help,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__OPF-items .content-form__selectRole-item .content-form__item-help,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__OPF-items .content-form__OPF-item .content-form__item-help {
   position: absolute;
   top: -5px;
   opacity: 0;
@@ -496,40 +496,40 @@
   border-radius: 5px;
   transition: all 0.4s ease;
 }
-.content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__selectRole-items .content-form__selectRole-item .content-form__item-help .content-form__item-help__title,
-.content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__selectRole-items .content-form__OPF-item .content-form__item-help .content-form__item-help__title,
-.content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__OPF-items .content-form__selectRole-item .content-form__item-help .content-form__item-help__title,
-.content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__OPF-items .content-form__OPF-item .content-form__item-help .content-form__item-help__title,
-.content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__selectRole-items .content-form__selectRole-item .content-form__item-help .content-form__item-help__title,
-.content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__selectRole-items .content-form__OPF-item .content-form__item-help .content-form__item-help__title,
-.content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__OPF-items .content-form__selectRole-item .content-form__item-help .content-form__item-help__title,
-.content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__OPF-items .content-form__OPF-item .content-form__item-help .content-form__item-help__title {
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__selectRole-items .content-form__selectRole-item .content-form__item-help .content-form__item-help__title,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__selectRole-items .content-form__OPF-item .content-form__item-help .content-form__item-help__title,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__OPF-items .content-form__selectRole-item .content-form__item-help .content-form__item-help__title,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__OPF-items .content-form__OPF-item .content-form__item-help .content-form__item-help__title,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__selectRole-items .content-form__selectRole-item .content-form__item-help .content-form__item-help__title,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__selectRole-items .content-form__OPF-item .content-form__item-help .content-form__item-help__title,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__OPF-items .content-form__selectRole-item .content-form__item-help .content-form__item-help__title,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__OPF-items .content-form__OPF-item .content-form__item-help .content-form__item-help__title {
   font-family: "Artifakt-Bold", sans-serif;
   padding-bottom: 5px;
 }
-.content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__selectRole-items .content-form__selectRole-item .content-form__item-help .content-form__item-help__subtitle,
-.content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__selectRole-items .content-form__OPF-item .content-form__item-help .content-form__item-help__subtitle,
-.content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__OPF-items .content-form__selectRole-item .content-form__item-help .content-form__item-help__subtitle,
-.content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__OPF-items .content-form__OPF-item .content-form__item-help .content-form__item-help__subtitle,
-.content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__selectRole-items .content-form__selectRole-item .content-form__item-help .content-form__item-help__subtitle,
-.content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__selectRole-items .content-form__OPF-item .content-form__item-help .content-form__item-help__subtitle,
-.content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__OPF-items .content-form__selectRole-item .content-form__item-help .content-form__item-help__subtitle,
-.content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__OPF-items .content-form__OPF-item .content-form__item-help .content-form__item-help__subtitle {
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__selectRole-items .content-form__selectRole-item .content-form__item-help .content-form__item-help__subtitle,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__selectRole-items .content-form__OPF-item .content-form__item-help .content-form__item-help__subtitle,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__OPF-items .content-form__selectRole-item .content-form__item-help .content-form__item-help__subtitle,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__OPF-items .content-form__OPF-item .content-form__item-help .content-form__item-help__subtitle,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__selectRole-items .content-form__selectRole-item .content-form__item-help .content-form__item-help__subtitle,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__selectRole-items .content-form__OPF-item .content-form__item-help .content-form__item-help__subtitle,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__OPF-items .content-form__selectRole-item .content-form__item-help .content-form__item-help__subtitle,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__OPF-items .content-form__OPF-item .content-form__item-help .content-form__item-help__subtitle {
   font-size: 12px;
   width: 70%;
 }
-.content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__selectRole-items .content-form__selectRole-item .content-form__item-help.active,
-.content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__selectRole-items .content-form__OPF-item .content-form__item-help.active,
-.content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__OPF-items .content-form__selectRole-item .content-form__item-help.active,
-.content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__OPF-items .content-form__OPF-item .content-form__item-help.active,
-.content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__selectRole-items .content-form__selectRole-item .content-form__item-help.active,
-.content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__selectRole-items .content-form__OPF-item .content-form__item-help.active,
-.content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__OPF-items .content-form__selectRole-item .content-form__item-help.active,
-.content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__OPF-items .content-form__OPF-item .content-form__item-help.active {
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__selectRole-items .content-form__selectRole-item .content-form__item-help.active,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__selectRole-items .content-form__OPF-item .content-form__item-help.active,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__OPF-items .content-form__selectRole-item .content-form__item-help.active,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__selectRole .content-form__OPF-items .content-form__OPF-item .content-form__item-help.active,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__selectRole-items .content-form__selectRole-item .content-form__item-help.active,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__selectRole-items .content-form__OPF-item .content-form__item-help.active,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__OPF-items .content-form__selectRole-item .content-form__item-help.active,
+.brif .content .content-main .content-forms .content-form .content-form__items .content-form__OPF .content-form__OPF-items .content-form__OPF-item .content-form__item-help.active {
   opacity: 1;
   visibility: visible;
 }
-.content .content-main .content-forms .content-form__step {
+.brif .content .content-main .content-forms .content-form__step {
   display: flex;
   position: absolute;
   width: 100%;
@@ -537,11 +537,11 @@
   justify-content: space-between;
   transition: all 0.2s ease;
 }
-.content .content-main .content-forms .content-form__step .content-form__step-prev.disable {
+.brif .content .content-main .content-forms .content-form__step .content-form__step-prev.disable {
   pointer-events: none;
   opacity: 0.3;
 }
-.content .content-main .content-forms .content-form__step button {
+.brif .content .content-main .content-forms .content-form__step button {
   background-color: #464E60;
   border: none;
   outline: none;
@@ -553,15 +553,15 @@
   font-size: 18px;
   position: relative;
 }
-.content .content-main .content-forms .content-form__step button span {
+.brif .content .content-main .content-forms .content-form__step button span {
   position: relative;
   z-index: 2;
 }
-.content .content-main .content-forms .content-form__step button img {
+.brif .content .content-main .content-forms .content-form__step button img {
   position: relative;
   z-index: 2;
 }
-.content .content-main .content-forms .content-form__step button::after {
+.brif .content .content-main .content-forms .content-form__step button::after {
   content: "";
   width: 0;
   height: 100%;
@@ -573,10 +573,10 @@
   z-index: 1;
   transition: all 0.2s ease;
 }
-.content .content-main .content-forms .content-form__step button:hover::after {
+.brif .content .content-main .content-forms .content-form__step button:hover::after {
   width: 100%;
 }
-.content .content-infobar {
+.brif .content .content-infobar {
   width: 30%;
   background-color: #17202B;
   border-radius: 5px;
@@ -585,7 +585,7 @@
   padding: 30px;
   gap: 10px;
 }
-.content .content-infobar .content-infobar__item .content-infobar__item-name {
+.brif .content .content-infobar .content-infobar__item .content-infobar__item-name {
   display: flex;
   padding: 10px 30px;
   border-radius: 5px;
@@ -593,30 +593,30 @@
   background-color: #202932;
   transition: all 0.2s ease;
 }
-.content .content-infobar .content-infobar__item .content-infobar__item-name .content-infobar__number {
+.brif .content .content-infobar .content-infobar__item .content-infobar__item-name .content-infobar__number {
   color: #33C078;
 }
-.content .content-infobar .content-infobar__item .content-infobar__content {
+.brif .content .content-infobar .content-infobar__item .content-infobar__content {
   font-size: 14px;
 }
-.content .content-infobar .content-infobar__item .content-infobar__content .content-infobar__content-item {
+.brif .content .content-infobar .content-infobar__item .content-infobar__content .content-infobar__content-item {
   padding: 6px 30px;
   padding-left: 12%;
   display: flex;
   background-color: #202932;
 }
-.content .content-infobar .content-infobar__item .content-infobar__content .content-infobar__content-item .content-infobar__content-value {
+.brif .content .content-infobar .content-infobar__item .content-infobar__content .content-infobar__content-item .content-infobar__content-value {
   color: #33C078;
 }
-.content .content-infobar .content-infobar__item .content-infobar__content .content-infobar__content-item .content-infobar__content-name {
+.brif .content .content-infobar .content-infobar__item .content-infobar__content .content-infobar__content-item .content-infobar__content-name {
   min-width: 55px;
   width: 55px;
   margin-right: 10px;
 }
-.content .content-infobar .content-infobar__item .content-infobar__content .content-infobar__content-item:last-child {
+.brif .content .content-infobar .content-infobar__item .content-infobar__content .content-infobar__content-item:last-child {
   padding-bottom: 15px;
   border-radius: 0 0 5px 5px;
 }
-.content .content-infobar .content-infobar__item.full .content-infobar__item-name {
+.brif .content .content-infobar .content-infobar__item.full .content-infobar__item-name {
   border-radius: 5px 5px 0 0;
 }

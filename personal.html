@@ -9,11 +9,12 @@
         integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <link rel="stylesheet" href="/style/dist/general.css">
     <link rel="stylesheet" href="/style/dist/main.css">
+    <link rel="stylesheet" href="/style/dist/personal.css">
     <title>Document</title>
 </head>
 
 <body>
-    <main>
+    <main class="personal">
         <div class="sidebar">
             <div class="sidebar-header">
                 <img src="/img/Logo.svg" alt="">
@@ -21,8 +22,7 @@
             <div class="sidebar-body">
 
                 <div class="sidebar-items">
-
-                    <div class="sidebar-item active">
+                    <div class="sidebar-item">
                         <div class="sidebar-item__img">
                             <img src="/img/sidebars/Quiz.svg" alt="brif">
                         </div>
@@ -31,7 +31,7 @@
                         </div>
                     </div>
 
-                    <div class="sidebar-item">
+                    <div class="sidebar-item active">
                         <div class="sidebar-item__img">
                             <img src="/img/sidebars/Personal_Area.svg" alt="personal">
                         </div>
@@ -89,50 +89,240 @@
 
         <div class="content">
             <header>
-                <div class="header-title">
-                    <h2>Личный кабинет</h2>
-                </div>
-                <div class="header-balance">
-                    <div class="header-balance__icon">
-                        <img src="/img/header/account_balance_wallet.svg" alt="balance">
+                <div class="header__up">
+                    <div class="header-title">
+                        <h2>Личный кабинет</h2>
                     </div>
-                    <div class="header-balance__title">
-                        <span>Баланс: </span>
-                    </div>
-                    <div class="header-balance__number">
-                        <span>9999999999 ₽</span>
-                    </div>
-                </div>
-                <div class="header-nav">
-                    <div class="header-nav__items">
-                        <div class="header-nav__item">
-                            <a href="/">
-                                <img src="/img/header/notifications_none.svg" alt="notification">
-                            </a>
+                    <div class="header-balance">
+                        <div class="header-balance__icon">
+                            <img src="/img/header/account_balance_wallet.svg" alt="balance">
                         </div>
-                        <div class="header-nav__item">
-                            <a href="/">
-                                <img src="/img/header/help_outline.svg" alt="help">
-                            </a>
+                        <div class="header-balance__title">
+                            <span>Баланс: </span>
+                        </div>
+                        <div class="header-balance__number">
+                            <span>9999999999 ₽</span>
                         </div>
                     </div>
-                </div>
-                <div class="header-profile">
-                    <div class="header-profile__img">
-                        <img src="/img/header/profile.png" alt="profile">
-                    </div>
-                    <div class="header-profile__text">
-                        <div class="header-profile__name">
-                            <span>Евдокимов А.Д.</span>
+                    <div class="header-nav">
+                        <div class="header-nav__items">
+                            <div class="header-nav__item">
+                                <a href="/">
+                                    <img src="/img/header/notifications_none.svg" alt="notification">
+                                </a>
+                            </div>
+                            <div class="header-nav__item">
+                                <a href="/">
+                                    <img src="/img/header/help_outline.svg" alt="help">
+                                </a>
+                            </div>
                         </div>
-                        <div class="header-profile__comp">
-                            <span>ООО “ГИС”</span>
+                    </div>
+                    <div class="header-profile">
+                        <div class="header-profile__img">
+                            <img src="/img/header/profile.png" alt="profile">
+                        </div>
+                        <div class="header-profile__text">
+                            <div class="header-profile__name">
+                                <span>Евдокимов А.Д.</span>
+                            </div>
+                            <div class="header-profile__comp">
+                                <span>ООО “ГИС”</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="header__bottom">
+                    <div class="header__items">
+                        <div class="header__item">
+                            <div class="header__item-info">
+                                <div class="img">
+                                    <img src="/img/personal/avatar.png" alt="profile">
+                                </div>
+                                <div class="info">
+                                    <div class="info__name">
+                                        <span>Вячеславовна Екатерина Викторовна</span>
+                                    </div>
+                                    <div class="info__role">
+                                        <img src="/img/personal/organization.svg" alt="gis">
+                                        <span>ООО "ГИС"</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="header__item">
+                            <div class="change__personal-items">
+                                <div class="change__personal-item aboutCompany">
+                                    <img src="/img/personal/file-search-alt.svg" alt="icon">
+                                    <span>Данные компании</span>
+                                </div>
+                                <div class="change__personal-item changePassword">
+                                    <img src="/img/personal/edit-alt.svg" alt="icon">
+                                    <span>Изменить пароль</span>
+                                </div>
+                                <div class="change__personal-item account disable">
+                                    <img src="/img/personal/Personal Area.svg" alt="icon">
+                                    <span>Аккаунт</span>
+                                </div>
+                                <div class="change__personal-item subscriptions disable">
+                                    <img src="/img/personal/file-search-alt.svg" alt="icon">
+                                    <span>Подписки</span>
+                                </div>
+                                <div class="change__personal-item mobileApp disable">
+                                    <img src="/img/personal/Phone.svg" alt="icon">
+                                    <span>Мобильное приложение</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </header>
             <div class="content-main">
-                
+                <div class="content__settings">
+                    <div class="content__setting-left">
+                        <div class="change__profile">
+                            <div class="input">
+                                <label for="">Фамилия <span>*</span></label>
+                                <input type="text" placeholder="Ваша фамилия" name="secondName">
+                            </div>
+                            <div class="input">
+                                <label for="">Имя <span>*</span></label>
+                                <input type="text" placeholder="Ваше имя" name="firstName">
+                            </div>
+                            <div class="input">
+                                <label for="">Отчество <span>*</span></label>
+                                <input type="text" placeholder="Ваше отчество" name="surName">
+                            </div>
+                        </div>
+                        <div class="organization__info">
+                            <div class="name">
+                                <img src="/img/personal/organization.svg" alt="icon">
+                                <span>Компания</span>
+                            </div>
+                            <div class="info">
+                                <div class="info__items">
+                                    <div class="info__item staff">
+                                        <div class="info__name">
+                                            <img src="/img/personal/users-alt.svg" alt="icon">
+                                            <span>Штат</span>
+                                        </div>
+                                        <div class="info__value">
+                                            <span>15 сотрудников</span>
+                                        </div>
+                                    </div>
+                                    <div class="info__item cost">
+                                        <div class="info__item-cost-items">
+                                            <div class="info__item-cost-item first">
+                                                <div class="info__name">
+                                                    <img src="/img/personal/account_balance_wallet.svg" alt="icon">
+                                                    <span>Расходы</span>
+                                                </div>
+                                                <div class="info__value">
+                                                    <span>652.000 ₽</span>
+                                                </div>
+                                            </div>
+                                            <div class="info__item-cost-item second">
+                                                <div class="info__name">
+                                                    <span>Постоянные</span>
+                                                </div>
+                                                <div class="info__value">
+                                                    <span>600.000 ₽</span>
+                                                </div>
+                                            </div>
+                                            <div class="info__item-cost-item third">
+                                                <div class="info__name">
+                                                    <span>Разовые</span>
+                                                </div>
+                                                <div class="info__value">
+                                                    <span>52.000 ₽</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="info__item taxationsSystem">
+                                        <div class="info__name">
+                                            <img src="/img/personal/copy-alt.svg" alt="icon">
+                                            <span>Система налогообложения</span>
+                                        </div>
+                                        <div class="info__value">
+                                            <span>Упрощенная</span>
+                                        </div>
+                                    </div>
+                                    <div class="info__item tender">
+                                        <div class="info__name">
+                                            <img src="/img/personal/user-plus.svg" alt="icon">
+                                            <span>Тендерное сопровождение</span>
+                                        </div>
+                                        <div class="info__value">
+                                            <span>Подключено</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content__setting-right">
+                        <div class="change__organization">
+                            <div class="input company">
+                                <label>Компания <span>*</span></label>
+                                <input type="text" placeholder="ООО “ГИС”">
+                            </div>
+                            <div class="select">
+                                <label>Страна <span>*</span></label>
+                                <select name="country">
+                                    <option value="default">Россия</option>
+                                    <option value="Казахстан">Казахстан</option>
+                                </select>
+                            </div>
+                            <div class="select">
+                                <label>Город <span>*</span></label>
+                                <select name="country">
+                                    <option value="default">Тюмень</option>
+                                    <option value="Россия">Россия</option>
+                                    <option value="Казахстан">Казахстан</option>
+                                </select>
+                            </div>
+                            <div class="select">
+                                <label>Телефон <span>*</span></label>
+                                <select name="country">
+                                    <option value="Россия">Россия</option>
+                                    <option value="Казахстан">Казахстан</option>
+                                </select>
+                            </div>
+                            <div class="select">
+                                <label>E-mail <span>*</span></label>
+                                <select name="country">
+                                    <option value="Россия">Тюмень</option>
+                                    <option value="Казахстан">Казахстан</option>
+                                </select>
+                            </div>
+                            <div class="select">
+                                <label>Роль <span>*</span></label>
+                                <select name="country">
+                                    <option value="Россия">ГИП</option>
+                                    <option value="Казахстан">Казахстан</option>
+                                </select>
+                            </div>
+                            <div class="select">
+                                <label>Проектируемые разделы <span>*</span></label>
+                                <select name="country">
+                                    <option value="Россия">АР</option>
+                                    <option value="Казахстан">Казахстан</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="change__region">
+                            <span>Регион проектирования</span>
+                            <button>
+                                Выбрать регион
+                            </button>
+                        </div>
+                        <div class="save__changes">
+                            <button class="save__changes-cancel disable">Отменить</button>
+                            <button class="save__changes-save">Сохранить</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
