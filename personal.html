@@ -156,7 +156,7 @@
                                     <img src="/img/personal/file-search-alt.svg" alt="icon">
                                     <span>Данные компании</span>
                                 </div>
-                                <div class="change__personal-item changePassword">
+                                <div class="change__personal-item changePassword" data-bs-toggle="modal" data-bs-target="#changePasswordModal">
                                     <img src="/img/personal/edit-alt.svg" alt="icon">
                                     <span>Изменить пароль</span>
                                 </div>
@@ -313,7 +313,7 @@
                         </div>
                         <div class="change__region">
                             <span>Регион проектирования</span>
-                            <button>
+                            <button data-bs-toggle="modal" data-bs-target="#changeRegionModal">
                                 Выбрать регион
                             </button>
                         </div>
@@ -329,12 +329,191 @@
 
 
 
+    <!-- MODAL -->
+
+    <div class="modal fade" id="changePasswordModal" tabindex="-1" aria-labelledby="changePasswordModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <button type="button" class="button-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <div class="modal-header">
+              <h1 class="modal-title fs-1" id="changePasswordModalLabel">Изменение пароля</h1>
+            </div>
+            <div class="modal-body">
+                <div class="input form-input__password fs-6">
+                    <label for="">Старый пароль<span>*</span></label>
+                    <input type="text" placeholder="Пароль">
+                    <span class="show-password"></span>
+                </div>
+                <div class="input form-input__password fs-6">
+                    <label for="">Новый пароль<span>*</span></label>
+                    <input type="text" placeholder="Пароль">
+                    <span class="show-password"></span>
+                </div>
+                <div class="input form-input__password fs-6">
+                    <label for="">Подтверждение пароля<span>*</span></label>
+                    <input type="text" placeholder="Пароль">
+                    <span class="show-password"></span>
+                </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary modal-btn disable" data-bs-dismiss="modal">Отменить</button>
+              <button type="button" class="btn btn-secondary modal-btn">Сохранить</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="changeRegionModal" tabindex="-1" aria-labelledby="changeRegionModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <button type="button" class="button-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <div class="modal-header">
+              <h1 class="modal-title fs-1" id="changeRegionModalLabel">Выберите регион проектирования</h1>
+            </div>
+            <div class="modal-body">
+                <div class="input searchRegion">
+                    <input type="text" placeholder="Поиск региона">
+                    <span class="search"></span>
+                </div>
+                <div class="search__content">
+                    <div class="search_content-right">
+                        <div class="search__items">
+                            <div class="checkbox">
+                                <input type="checkbox">
+                                <label for="">Выбрать все регионы</label>
+                            </div>
+                            <div class="checkbox list">
+                                <div class="checkbox-main">
+                                    <input type="checkbox">
+                                    <label for="">Центральный ФО - 84</label>
+                                </div>
+                            </div>
+                            <div class="checkbox list">
+                                <div class="checkbox-main">
+                                    <input type="checkbox">
+                                    <label for="">Северо-западный ФО - 29</label>
+                                </div>
+                                <div class="search__item-more">
+                                    <div class="item">
+                                        <div class="checkbox">
+                                            <input type="checkbox">
+                                            <label for="">Республика Дагестан</label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <input type="checkbox">
+                                            <label for="">Республика Дагестан</label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <input type="checkbox">
+                                            <label for="">Республика Ингушетия</label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <input type="checkbox">
+                                            <label for="">Кабардино-Балкарская Республика</label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <input type="checkbox">
+                                            <label for="">Карачаево-Черкесская Республика</label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <input type="checkbox">
+                                            <label for="">Республика Северная Осетия — Алания</label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <input type="checkbox">
+                                            <label for="">Чеченская Республика</label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <input type="checkbox">
+                                            <label for="">Ставропольский край</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="checkbox list">
+                                <div class="checkbox-main">
+                                    <input type="checkbox">
+                                    <label for="">Южный ФО - 38</label>
+                                </div>
+                            </div>
+                            <div class="checkbox list">
+                                <div class="checkbox-main">
+                                    <input type="checkbox">
+                                    <label for="">Северо-Кавказский ФО - 29</label>
+                                </div>
+                            </div>
+                            <div class="checkbox list">
+                                <div class="checkbox-main">
+                                    <input type="checkbox">
+                                    <label for="">Приволжский ФО - 23</label>
+                                </div>
+                            </div>
+                            <div class="checkbox list">
+                                <div class="checkbox-main">
+                                    <input type="checkbox">
+                                    <label for="">Уральскй ФО - 23</label>
+                                </div>
+                            </div>
+                            <div class="checkbox list">
+                                <div class="checkbox-main">
+                                    <input type="checkbox">
+                                    <label for="">Сибирский ФО - 23</label>
+                                </div>
+                            </div>
+                            <div class="checkbox list">
+                                <div class="checkbox-main">
+                                    <input type="checkbox">
+                                    <label for="">Центральный ФО - 84</label>
+                                </div>
+                            </div>
+                            <div class="checkbox list">
+                                <div class="checkbox-main">
+                                    <input type="checkbox">
+                                    <label for="">Центральный ФО - 84</label>
+                                </div>
+                            </div>
+                            <div class="checkbox list">
+                                <div class="checkbox-main">
+                                    <input type="checkbox">
+                                    <label for="">Центральный ФО - 84</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="search__content-left">
+                        <div class="search__selected-items">
+                            <div class="search__selected-item">
+                                <div class="checkbox searchSelected">
+                                    <input type="checkbox">
+                                    <label for="">Центральный ФО - 84</label>
+                                    <img src="/img/register/btn-close.svg" alt="x">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="search__content-btn">
+                            <button class="resetRegions">Снять выделения</button>
+                            <button class="saveRegions">Сохранить</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="modal-footer">
+              <button type="button" class="btn btn-secondary modal-btn disable" data-bs-dismiss="modal">Отменить</button>
+              <button type="button" class="btn btn-secondary modal-btn">Сохранить</button>
+            </div> -->
+          </div>
+        </div>
+      </div>
+
+
+
     <!-- SCRIPT -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous">
         </script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="/js/script.js"></script>
+    <script src="/js/personal.js"></script>
 </body>
 
 </html>

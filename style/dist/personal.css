@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .personal .content-main .content__settings {
   display: flex;
   justify-content: space-between;
@@ -135,4 +136,64 @@
 .personal .content-main .content__settings .content__setting-right .save__changes button.disable {
   opacity: 0.4;
   pointer-events: none;
+}
+
+#changeRegionModal .modal-dialog .modal-content .modal-body .search__content {
+  display: flex;
+  margin-top: 30px;
+}
+#changeRegionModal .modal-dialog .modal-content .modal-body .search__content .search_content-right {
+  width: 50%;
+  background-color: #101824;
+  padding: 10px 30px;
+  border-radius: 5px 0 0 5px;
+  height: 560px;
+  display: block;
+  overflow: overlay;
+}
+#changeRegionModal .modal-dialog .modal-content .modal-body .search__content .search_content-right::-webkit-scrollbar {
+  background-color: #0A101D;
+  /* Цвет бегунка */
+  border-radius: 0;
+  /* Округление бегунка */
+  width: 5px;
+}
+#changeRegionModal .modal-dialog .modal-content .modal-body .search__content .search_content-right::-webkit-scrollbar-thumb {
+  background-color: #607383;
+  border-radius: 30px;
+}
+#changeRegionModal .modal-dialog .modal-content .modal-body .search__content .search_content-right .search__items {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+#changeRegionModal .modal-dialog .modal-content .modal-body .search__content .search__content-left {
+  background-color: #17202B;
+  width: 50%;
+  padding: 30px;
+  border-radius: 0 5px 5px 0;
+  position: relative;
+}
+#changeRegionModal .modal-dialog .modal-content .modal-body .search__content .search__content-left .search__content-btn {
+  display: flex;
+  position: absolute;
+  width: 88%;
+  bottom: 25px;
+  justify-content: space-between;
+}
+#changeRegionModal .modal-dialog .modal-content .modal-body .search__content .search__content-left .search__content-btn button {
+  width: 48%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 65px;
+  gap: 10px;
+  border-radius: 5px;
+  background: #464E60;
+  border: 0;
+  color: #fff;
+}
+#changeRegionModal .modal-dialog .modal-content .modal-body .search__content .search__content-left .search__content-btn button.resetRegions {
+  background-color: transparent;
+  border: 1px solid #464E61;
 }

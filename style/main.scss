@@ -6,6 +6,7 @@ body {
 .input{
     display: flex;
     flex-direction: column;
+    position: relative;
     input{
         -webkit-appearance: none;
         -moz-appearance: none;
@@ -44,6 +45,33 @@ body {
             color: #FED578;
         }
     }
+
+    .searchRegion{
+        input{
+            color: black;
+        }
+    }
+    .show-password{
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        background-image: url('/img/authorization/visibility_off.svg');
+        top: 53%;
+        right: 6%;
+        cursor: pointer;
+    }
+    .search{
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        background-image: url('/img/personal/search.svg');
+        top: 35%;
+        right: 2%;
+        cursor: pointer;
+        
+
+
+    } 
 }
 
 .select{
@@ -91,6 +119,235 @@ body {
         span {
             color: #FED578;
         }
+    }
+}
+
+.checkbox{
+    position: relative;
+    padding: 15px 20px;
+    border: 1px solid #6B7177;
+    border-radius: 5px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 40px;
+    transition: all .2s ease;
+    cursor: pointer;
+    
+    input {
+        cursor: pointer;
+        position: relative;
+        width: 24px;
+        height: 24px;
+        appearance: none;
+        -webkit-appearance: none;
+        background-color: transparent;
+        border: 1px solid #4D5359;
+        border-radius: 4px;
+
+        &:checked {
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                width: 100%;
+                height: 100%;
+                background-color: #2FC177;
+                border-radius: 2px;
+            }
+
+            &::after {
+                content: "✓";
+                display: inline-block;
+                color: #fff;
+                font-size: 14px;
+                line-height: 24px;
+                position: absolute;
+                top: 55%;
+                left: 50%;
+                font-weight: bold;
+                transform: translate(-50%, -50%) scale(1);
+                transition: 0.3s;
+            }
+        }
+    }
+    label {
+        color: #F8FEFE;
+        &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            left: 14%;
+            transform: translateY(-50%);
+            top: 50%;
+            height: 50%;
+            width: 1px;
+            background-color: #6B7177;
+        }
+    }
+
+    &.active {
+        border: 1px solid #2FC177;
+
+        label::after {
+            background-color: #fff;
+        }
+    }
+
+    &.disable {
+        pointer-events: none;
+        opacity: .3;
+    }
+    &.searchSelected{
+        border: 1px solid #33C078;
+        background: rgba(47, 193, 119, 0.02);
+        backdrop-filter: blur(4px);
+        label {
+            color: #2FC177;
+            font-family: 'Artifakt-Bold', 'sans-serif';
+            &::after {
+                width: 0px;
+            }
+        }
+        img{
+            position: absolute;
+            right: 20px;
+        }
+    }
+
+    &.list{
+        position: relative;
+        gap: 20px;
+        flex-direction: column;
+        overflow: hidden;
+        max-height: 57px;
+        &::before{
+            content: "";
+            position: absolute;
+            width: 24px;
+            height: 24px;
+            right: 20px;
+            transform: rotateZ(180deg);
+            background-image: url('/img/personal/angle-up.svg');
+            transition: all .4s ease;
+        }
+        gap: 20px;
+        flex-direction: column;
+        .checkbox-main{
+            gap: 40px;
+            display: flex;
+            width: 100%;
+            justify-content: flex-start;
+            position: relative;
+            label{
+                &::after{
+                    height: 27px;
+                    left: 42px;
+                }
+            }
+        }
+        .search__item-more{
+            width: 100%;
+            position: relative;
+            .checkbox{
+                border: none;
+                width: 100%;
+                padding : 15px;
+                label{
+                    &::after{
+                        height: 27px;
+                        left: 60px;
+                    }
+                }
+            }
+        }
+        &.active{
+            max-height: 1000px;
+            &::before{
+                transform: rotateZ(0);
+            }
+            label{
+                &::after{
+                   background-color: #6B7177;
+                }
+            }
+            .checkbox-main{
+                position: relative;
+                &::after{
+                    content: "";
+                    width: 100%;
+                    height: 1px;
+                    background-color: #F8FEFE;
+                    position: absolute;
+                    top: 40px;
+                }
+            }
+        }
+    }
+}
+
+
+.modal{
+    color: #F8FEFE;
+    .modal-content{
+        background-color: #202932;
+        width: 585px;
+        padding: 30px;
+        .button-close{
+            position: absolute;
+            right: 25px;
+            top: 25px;
+            background-image: url('/img/register/btn-close.svg');
+            width: 30px;
+            border: none;
+            background-color: transparent;
+            height: 30px;
+        }
+    }
+    .modal-header{
+        border-bottom: none;
+    }
+    .modal-footer{
+        border-top: none;
+        .modal-btn{
+            width: 48%;
+            height: 65px;
+            background-color: #464E61;
+            border: none;
+            color: #F8FEFE;
+            font-weight: 400;
+            font-size: 18px;
+            &.disable{
+                opacity: .4;
+                pointer-events: none;
+            }
+        }
+    }
+}
+
+#changePasswordModal{
+    .modal-content{
+        min-width: 585px;
+    }
+    .modal-body{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+#changeRegionModal{
+    .modal-dialog{
+        max-width: none;
+        justify-content: center;
+    }
+    .modal-content{
+        min-width: 1120px;
+    }
+    .modal-title{
+        font-family: 'Artifakt-Bold', 'sans-serif';
     }
 }
 
