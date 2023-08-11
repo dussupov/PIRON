@@ -1,0 +1,22 @@
+header{
+    .header__bottom{
+        .header__items{
+            .header__item{
+                width: 80% !important;
+                .change__personal-items{
+                    .change__personal-item.goBack{
+                        width: 54px;
+                        height: 54px;
+                        padding: 0;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        img{
+                            width: 24px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -182,13 +182,35 @@
                         padding : 30px;
                         border-radius: 0 5px 5px 0;
                         position: relative;
+                        height: 560px;
+                        display: block;
+                        overflow: overlay;
+                        padding-bottom: 100px;
+                        &::-webkit-scrollbar{
+                            background-color: #0A101D; /* Цвет бегунка */
+                            border-radius: 0; /* Округление бегунка */
+                            width: 5px;
+                        }
+                        &::-webkit-scrollbar-thumb {
+                            background-color: #607383;
+                            border-radius: 30px;
+                        }
+                        .search__items{
+                            display: flex;
+                            flex-direction: column;
+                            padding-bottom: 100px;
+                            gap: 20px;
+                        }
 
                         .search__content-btn{
                             display: flex;
-                            position: absolute;
-                            width: 88%;
-                            bottom: 25px;
+                            position: fixed;
+                            width: 460px;
+                            background: #17202B;
+                            bottom: 230px;
+                            height: 100px;
                             justify-content: space-between;
+                            align-items: center;
                             button{
                                 width: 48%;
                                 display: flex;
@@ -203,6 +225,50 @@
                                 &.resetRegions{
                                     background-color: transparent;
                                     border: 1px solid #464E61;
+                                }
+                            }
+                        }
+                        .search__selected-items{
+                            display: flex;
+                            flex-direction: column;
+                            gap: 20px;
+                        }
+                    }
+                    .search__content-items{
+                        opacity: 0;
+                        visibility: hidden;
+                        display: flex;
+                        flex-direction: column;
+                        flex-wrap: wrap;
+                        padding: 20px 120px;
+                        border-radius: 5px;
+                        width: 97%;
+                        position: absolute;
+                        height: 84%;
+                        background: rgba(255, 255, 255, 0.02);
+                        backdrop-filter: blur(25px);
+                        transition: all .2s ease;
+                        border: 1px solid #464E61;
+                        // justify-content: space-between;
+                        &.active{
+                            opacity: 1;
+                            visibility: visible;
+                        }
+                        .search__content-item__parent{
+                            padding-bottom: 10px;
+                        }
+                        .search__content-item{
+                            width: 60%;
+                            margin-bottom: 10px;
+                            .checkbox.more{
+                                border: 0;
+                                font-size: 14px;
+                                padding: 0;
+                                height: 40px;
+                                label{
+                                    &::after{
+                                        left: 10%
+                                    }
                                 }
                             }
                         }

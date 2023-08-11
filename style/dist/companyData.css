@@ -1,0 +1,14 @@
+header .header__bottom .header__items .header__item {
+  width: 80% !important;
+}
+header .header__bottom .header__items .header__item .change__personal-items .change__personal-item.goBack {
+  width: 54px;
+  height: 54px;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .header__bottom .header__items .header__item .change__personal-items .change__personal-item.goBack img {
+  width: 24px;
+}

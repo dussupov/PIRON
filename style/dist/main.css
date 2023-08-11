@@ -42,9 +42,6 @@ body {
 .input label span {
   color: #FED578;
 }
-.input .searchRegion input {
-  color: black;
-}
 .input .show-password {
   position: absolute;
   width: 24px;
@@ -62,6 +59,12 @@ body {
   top: 35%;
   right: 2%;
   cursor: pointer;
+}
+.input.searchRegion input {
+  color: #fff;
+}
+.input.searchRegion input::placeholder {
+  color: #fff;
 }
 
 .select {
@@ -315,6 +318,22 @@ body {
 }
 #changeRegionModal .modal-title {
   font-family: "Artifakt-Bold", "sans-serif";
+}
+
+#changeAvatarModal .modal-content {
+  min-width: 585px;
+}
+#changeAvatarModal .modal-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#changeAvatarModal .modal-body .title {
+  font-size: 18px;
+}
+#changeAvatarModal .modal-body img {
+  width: 250px;
+  height: 250px;
 }
 
 main {
@@ -581,6 +600,7 @@ main::after {
   display: flex;
 }
 .content header .header__bottom .header__item .header__item-info .img img {
+  cursor: pointer;
   width: 80px;
   height: 80px;
 }
@@ -637,4 +657,7 @@ main::after {
 .content header .header__bottom .header__item .change__personal-items .change__personal-item.disable {
   opacity: 0.4;
   pointer-events: none;
+}
+.content header .header__bottom .header__item .change__personal-items .change__personal-item.active {
+  background-color: #33C078;
 }

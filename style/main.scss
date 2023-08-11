@@ -46,11 +46,6 @@ body {
         }
     }
 
-    .searchRegion{
-        input{
-            color: black;
-        }
-    }
     .show-password{
         position: absolute;
         width: 24px;
@@ -67,11 +62,16 @@ body {
         background-image: url('/img/personal/search.svg');
         top: 35%;
         right: 2%;
-        cursor: pointer;
-        
-
-
+        cursor: pointer;    
     } 
+    &.searchRegion{
+        input{
+            color: #fff;
+           &::placeholder{
+            color: #fff;
+           }
+        }
+    }
 }
 
 .select{
@@ -348,6 +348,23 @@ body {
     }
     .modal-title{
         font-family: 'Artifakt-Bold', 'sans-serif';
+    }
+}
+#changeAvatarModal{
+    .modal-content{
+        min-width: 585px;
+    }
+    .modal-body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .title{
+            font-size: 18px;
+        }
+        img{
+            width: 250px;
+            height: 250px;
+        }
     }
 }
 
@@ -650,6 +667,7 @@ main {
                     gap: 20px;
                     display: flex;
                     .img img{
+                        cursor: pointer;
                         width: 80px;
                         height: 80px;
                     }
@@ -710,6 +728,10 @@ main {
                         &.disable{
                             opacity: .4;
                             pointer-events: none;
+                        }
+
+                        &.active{
+                            background-color: #33C078;
                         }
                     }
                 }
