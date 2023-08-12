@@ -92,6 +92,9 @@
                             top: 53%;
                             right: 6%;
                             cursor: pointer;
+                            &.active{
+                                background-image: url('/img/authorization/eye.svg');
+                            }
                         }
                     }
                     .form-input__password{
@@ -110,17 +113,34 @@
                             appearance: none;
                             -webkit-appearance: none;
                             background-color: transparent;
-                            border: 1px solid #FFF;
-                            border-radius: 4px; 
-                            &:checked::before{
-                                content: "";
-                                position: absolute;
-                                top: 4px;
-                                left: 4px;
-                                width: 13px;
-                                height: 13px;
-                                background-color: #F8FEFE;
-                                border-radius: 2px;
+                            border: 1px solid #4D5359;
+                            border-radius: 4px;
+                    
+                            &:checked {
+                                &::before {
+                                    content: "";
+                                    position: absolute;
+                                    top: 0px;
+                                    left: 0px;
+                                    width: 100%;
+                                    height: 100%;
+                                    background-color: #2FC177;
+                                    border-radius: 2px;
+                                }
+                    
+                                &::after {
+                                    content: "✓";
+                                    display: inline-block;
+                                    color: #fff;
+                                    font-size: 14px;
+                                    line-height: 24px;
+                                    position: absolute;
+                                    top: 55%;
+                                    left: 50%;
+                                    font-weight: bold;
+                                    transform: translate(-50%, -50%) scale(1);
+                                    transition: 0.3s;
+                                }
                             }
                         }
                         label{
