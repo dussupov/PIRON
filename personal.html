@@ -268,59 +268,82 @@
                                 <label>Компания <span>*</span></label>
                                 <input type="text" placeholder="ООО “ГИС”">
                             </div>
-                            <div class="select">
-                                <label>Страна <span>*</span></label>
-                                <select name="country">
-                                    <option value="default">Россия</option>
-                                    <option value="Казахстан">Казахстан</option>
-                                </select>
+                            <div class="formSelect" name="country">
+                                <label>Страна<span>*</span></label>
+                                <div class="select__header">
+                                    <span class="select__current">Выберите страну</span>
+                                    <div class="select__icon"></div>
+                                </div>
+                                <div class="select__body">
+                                    <div class="select__item">Казахстан</div>
+                                    <div class="select__item">Россия</div>
+                                </div>
                             </div>
-                            <div class="select">
-                                <label>Город <span>*</span></label>
-                                <select name="country">
-                                    <option value="default">Тюмень</option>
-                                    <option value="Россия">Россия</option>
-                                    <option value="Казахстан">Казахстан</option>
-                                </select>
+                            <div class="formSelect" name="city">
+                                <label>Город<span>*</span></label>
+                                <div class="select__header">
+                                    <span class="select__current">Тюмень</span>
+                                    <div class="select__icon"></div>
+                                </div>
+                                <div class="select__body">
+                                    <div class="select__item">Алматы</div>
+                                    <div class="select__item">Челябинск</div>
+                                </div>
                             </div>
-                            <div class="select">
-                                <label>Телефон <span>*</span></label>
-                                <select name="country">
-                                    <option value="Россия">Россия</option>
-                                    <option value="Казахстан">Казахстан</option>
-                                </select>
+                            <div class="formSelect" name="phone">
+                                <label>Телефон<span>*</span></label>
+                                <div class="select__header">
+                                    <span class="select__current">Выберите страну</span>
+                                    <div class="select__icon"></div>
+                                </div>
+                                <div class="select__body">
+                                    <div class="select__item">Алматы</div>
+                                    <div class="select__item">Челябинск</div>
+                                </div>
                             </div>
-                            <div class="select">
-                                <label>E-mail <span>*</span></label>
-                                <select name="country">
-                                    <option value="Россия">Тюмень</option>
-                                    <option value="Казахстан">Казахстан</option>
-                                </select>
+                            <div class="formSelect" name="Email">
+                                <label>E-mail<span>*</span></label>
+                                <div class="select__header">
+                                    <span class="select__current">Тюмень</span>
+                                    <div class="select__icon"></div>
+                                </div>
+                                <div class="select__body">
+                                    <div class="select__item">Алматы</div>
+                                    <div class="select__item">Челябинск</div>
+                                </div>
                             </div>
-                            <div class="select">
-                                <label>Роль <span>*</span></label>
-                                <select name="country">
-                                    <option value="Россия">ГИП</option>
-                                    <option value="Казахстан">Казахстан</option>
-                                </select>
+                            <div class="formSelect" name="role">
+                                <label>Роль<span>*</span></label>
+                                <div class="select__header">
+                                    <span class="select__current">ГИП</span>
+                                    <div class="select__icon"></div>
+                                </div>
+                                <div class="select__body">
+                                    <div class="select__item">Алматы</div>
+                                    <div class="select__item">Челябинск</div>
+                                </div>
                             </div>
-                            <div class="select">
-                                <label>Проектируемые разделы <span>*</span></label>
-                                <select name="country">
-                                    <option value="Россия">АР</option>
-                                    <option value="Казахстан">Казахстан</option>
-                                </select>
+                            <div class="formSelect" name="city">
+                                <label>Проектируемые разделы<span>*</span></label>
+                                <div class="select__header">
+                                    <span class="select__current">AP</span>
+                                    <div class="select__icon"></div>
+                                </div>
+                                <div class="select__body">
+                                    <div class="select__item">Алматы</div>
+                                    <div class="select__item">Челябинск</div>
+                                </div>
                             </div>
                         </div>
                         <div class="change__region">
                             <span>Регион проектирования</span>
                             <button data-bs-toggle="modal" data-bs-target="#changeRegionModal">
-                                Выбрать регион
+                                <p>Выбрать регион</p>
                             </button>
                         </div>
                         <div class="save__changes">
-                            <button class="save__changes-cancel disable">Отменить</button>
-                            <button class="save__changes-save">Сохранить</button>
+                            <button class="save__changes-cancel disable"><span>Отменить</span></button>
+                            <button class="save__changes-save"><span>Сохранить</span></button>
                         </div>
                     </div>
                 </div>
@@ -383,8 +406,8 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary modal-btn disable"
-                        data-bs-dismiss="modal">Отменить</button>
-                    <button type="button" class="btn btn-secondary modal-btn">Сохранить</button>
+                        data-bs-dismiss="modal"><span>Отменить</span></button>
+                    <button type="button" class="btn btn-secondary modal-btn"><span>Сохранить</span></button>
                 </div>
             </div>
         </div>
@@ -562,8 +585,8 @@
 
                             </div>
                             <div class="search__content-btn">
-                                <button class="resetRegions">Снять выделения</button>
-                                <button class="saveRegions">Сохранить</button>
+                                <button class="resetRegions"><span>Снять выделения</span></button>
+                                <button class="saveRegions"><span>Сохранить</span></button>
                             </div>
                         </div>
                         <div class="search__content-items">

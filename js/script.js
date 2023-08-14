@@ -3,6 +3,8 @@ window.addEventListener('load', () => {
 
     const btn = document.querySelectorAll('.show-password');
 
+    console.log(btn)
+
     btn.forEach((e) => {
         e.addEventListener('click', () => {
             e.classList.toggle('active')

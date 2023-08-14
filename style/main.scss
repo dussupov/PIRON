@@ -54,6 +54,9 @@ body {
         top: 53%;
         right: 6%;
         cursor: pointer;
+        &.active{
+            background-image: url('/img/authorization/eye.svg');
+        }
     }
     .search{
         position: absolute;
@@ -411,6 +414,7 @@ body {
         .modal-btn{
             width: 48%;
             height: 65px;
+            position: relative;
             background-color: #464E61;
             border: none;
             color: #F8FEFE;
@@ -419,6 +423,26 @@ body {
             &.disable{
                 opacity: .4;
                 pointer-events: none;
+            }
+            span{
+                position: relative;
+                z-index: 3;
+            }
+            &:before{
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                background-color: #33C078;
+                border-radius: 5px;
+                height: 100%;
+                width: 0;
+                transition: all .4s ease;
+            }
+            &:hover{
+                &:before{
+                    width: 100%;
+                }
             }
         }
     }

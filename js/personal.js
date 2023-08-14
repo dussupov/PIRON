@@ -16,31 +16,70 @@ window.addEventListener('load', () => {
                 let label = e.target.nextElementSibling.textContent;
 
                 if (parentCheckboxMain) {
+                    let parentLabel = parentCheckboxMain.querySelector('label').textContent
+
                     // Если чекбокс является дочерним для главного чекбокса
                     if (e.target.checked) {
                         // Добавляем дочерние элементы в правую часть
-                        let childCheckboxes = parentCheckboxMain.closest('.checkbox.list').querySelectorAll('.search__more-name');
-                        childCheckboxes.forEach(childCheckbox => {
-                            let childLabel = childCheckbox.textContent;
-                            // Добавляем HTML-код выбранного элемента
-                            searchSelectedBox.innerHTML += `
-                            <div class="search__selected-item">
-                                <div class="checkbox searchSelected">
-                                    <input type="checkbox">
-                                    <label for="">${childLabel}</label>
-                                    <img src="/img/register/btn-close.svg" alt="x">
-                                </div>
+                        searchSelectedBox.innerHTML += `
+                        <div class="search__selected-item">
+                            <div class="checkbox searchSelected">
+                                <label for="">${parentLabel}</label>
+                                <img src="/img/register/btn-close.svg" alt="x">
                             </div>
-                            `;
+                        </div>
+                        `;
+                        let childCheckboxes = parentCheckboxMain.closest('.checkbox.list').querySelectorAll('.checkbox.more')
+                        childCheckboxes.forEach(e => {
+                            let childBoxName = e.querySelector('.search__more-name');
+                            let childLabel = childBoxName.textContent;
+                            e.querySelector('input').checked = true
+                            e.classList.add('disable')
+
+                            // Добавляем HTML-код выбранного элемента
+                            // searchSelectedBox.innerHTML += `
+                            // <div class="search__selected-item">
+                            //     <div class="checkbox searchSelected">
+                            //         <label for="">${childLabel}</label>
+                            //         <img src="/img/register/btn-close.svg" alt="x">
+                            //     </div>
+                            // </div>
+                            // `;
                         });
+
+                        checkboxList.forEach(i => {
+                            let parentCheckBoxLabel = i.querySelector('label').textContent
+                            let checkBoxMore = i.querySelectorAll('.checkbox.more')
+                            searchSelectedBox.querySelectorAll('.search__selected-item').forEach(item => {
+                                item.querySelector('img').addEventListener('click', () => {
+                                    if (parentCheckBoxLabel == item.querySelector('label').textContent) {
+                                        i.querySelector('input').checked = false
+                                        checkBoxMore.forEach(e =>{
+                                            console.log(e)
+                                            e.classList.remove('disable')
+                                            e.querySelector('input').checked = false
+                                        })
+                                    }
+                                    searchSelectedBox.removeChild(item);
+                                })
+                            })
+                        })
+
                     } else {
                         // Если родительский чекбокс снят, удаляем соответствующие элементы
+                        let childCheckboxes = parentCheckboxMain.closest('.checkbox.list').querySelectorAll('.checkbox.more')
                         let selectedItems = searchSelectedBox.querySelectorAll('.search__selected-item');
                         let parentLabel = parentCheckboxMain.closest('.checkbox.list').querySelectorAll('.search__item-more .item .checkbox label')
                         let parentLabels = []
                         parentLabel.forEach(e => {
                             parentLabels.push(e.textContent)
                         })
+
+                        childCheckboxes.forEach(e => {
+                            e.querySelector('input').checked = false
+                            e.classList.remove('disable')
+                        })
+
                         selectedItems.forEach(item => {
                             let selectedLabel = item.querySelector('.searchSelected label').textContent;
                             // Удаляем элементы, соответствующие родительским или текущему чекбоксу
@@ -56,12 +95,14 @@ window.addEventListener('load', () => {
                         searchSelectedBox.innerHTML += `
                         <div class="search__selected-item">
                             <div class="checkbox searchSelected">
-                                <input type="checkbox">
                                 <label for="">${label}</label>
                                 <img src="/img/register/btn-close.svg" alt="x">
                             </div>
                         </div>
                         `;
+
+                        let parentCheckboxMain = e.target.closest('.checkbox.list').querySelector('.checkbox-main input');
+                        parentCheckboxMain.checked = true
 
                         // Добавляем обработчики событий для удаления выбранных элементов
                         checkboxList.forEach(i => {
@@ -86,6 +127,23 @@ window.addEventListener('load', () => {
                                 searchSelectedBox.removeChild(item);
                             }
                         });
+
+                        const parentCheckBox = e.target.closest('.checkbox.list')
+                        const childCheckBox = parentCheckBox.querySelectorAll('.checkbox.more')
+                        let checkedCheckBoxChildCounter = childCheckBox.length
+
+                        childCheckBox.forEach(e => {
+                            if (checkedCheckBoxChildCounter > 1) {
+                                if (e.querySelector('input').checked == false) {
+                                    checkedCheckBoxChildCounter--
+                                }
+                            }
+                            else {
+                                let parentCheckboxMain = parentCheckBox.querySelector('.checkbox-main input');
+                                parentCheckboxMain.checked = false
+                            }
+                        })
+
                     }
                 }
             } else {
@@ -95,30 +153,63 @@ window.addEventListener('load', () => {
                         elem.classList.remove('active')
                     } else {
                         elem.querySelectorAll('.checkbox.more').forEach(el => {
-                            console.log(e.target.textContent)
                             if (el.querySelector('label').textContent == e.target.textContent) {
+
                                 if (el.querySelector('input').checked) {
 
-                                     let selectedItems = searchSelectedBox.querySelectorAll('.search__selected-item');
-                                        selectedItems.forEach(item => {
-                                            let selectedLabel = item.querySelector('.searchSelected label').textContent;
-                                            if (selectedLabel === el.querySelector('label').textContent) {
-                                                searchSelectedBox.removeChild(item);
-                                            }
+                                    let selectedItems = searchSelectedBox.querySelectorAll('.search__selected-item');
+                                    selectedItems.forEach(item => {
+                                        let selectedLabel = item.querySelector('.searchSelected label').textContent;
+                                        if (selectedLabel === el.querySelector('label').textContent) {
+                                            searchSelectedBox.removeChild(item);
+                                        }
                                     })
 
                                     el.querySelector('input').checked = false
+
+                                    const parentCheckBox = e.target.closest('.checkbox.list')
+                                    const childCheckBox = parentCheckBox.querySelectorAll('.checkbox.more')
+                                    let checkedCheckBoxChildCounter = childCheckBox.length
+
+                                    childCheckBox.forEach(e => {
+                                        if (checkedCheckBoxChildCounter > 1) {
+                                            if (e.querySelector('input').checked == false) {
+                                                checkedCheckBoxChildCounter--
+                                            }
+                                        }
+                                        else {
+                                            let parentCheckboxMain = parentCheckBox.querySelector('.checkbox-main input');
+                                            parentCheckboxMain.checked = false
+                                        }
+                                    })
+
                                 } else {
+
                                     searchSelectedBox.innerHTML += `
                                         <div class="search__selected-item">
                                             <div class="checkbox searchSelected">
-                                                <input type="checkbox">
                                                 <label for="">${el.querySelector('label').textContent}</label>
                                                 <img src="/img/register/btn-close.svg" alt="x">
                                             </div>
                                         </div>
                                     `
                                     el.querySelector('input').checked = true
+                                    let parentCheckboxMain = e.target.closest('.checkbox.list').querySelector('.checkbox-main input');
+                                    parentCheckboxMain.checked = true
+
+                                    checkboxList.forEach(i => {
+                                        let checkBoxMore = i.querySelectorAll('.checkbox.more')
+                                        searchSelectedBox.querySelectorAll('.search__selected-item').forEach(item => {
+                                            item.querySelector('img').addEventListener('click', () => {
+                                                checkBoxMore.forEach(el => {
+                                                    if (el.querySelector('label').textContent == item.querySelector('label').textContent) {
+                                                        el.querySelector('input').checked = false
+                                                    }
+                                                })
+                                                searchSelectedBox.removeChild(item);
+                                            })
+                                        })
+                                    })
                                 }
                             }
                         })
@@ -139,7 +230,7 @@ window.addEventListener('load', () => {
         if (val != '') {
             // Показываем контейнер с результатами поиска
             document.querySelector('.search__content-items').classList.add('active');
-            
+
             let groupedItems = {};
 
             items.forEach(i => {
@@ -235,7 +326,6 @@ window.addEventListener('load', () => {
                         searchSelectedBox.innerHTML += `
                         <div class="search__selected-item">
                             <div class="checkbox searchSelected">
-                                <input type="checkbox">
                                 <label for="">${e.querySelector('label').textContent}</label>
                                 <img src="/img/register/btn-close.svg" alt="x">
                             </div>

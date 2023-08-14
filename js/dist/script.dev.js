@@ -3,6 +3,7 @@
 window.addEventListener('load', function () {
   //Добавляем показ пароля при клике на иконку
   var btn = document.querySelectorAll('.show-password');
+  console.log(btn);
   btn.forEach(function (e) {
     e.addEventListener('click', function () {
       e.classList.toggle('active');

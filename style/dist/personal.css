@@ -86,6 +86,14 @@
   margin-bottom: 20px;
   width: 49%;
 }
+.personal .content-main .content__settings .content__setting-right .change__organization .formSelect {
+  margin-top: 0;
+  margin-bottom: 50px;
+  width: 49%;
+}
+.personal .content-main .content__settings .content__setting-right .change__organization .formSelect .select__header {
+  background-color: rgba(255, 255, 255, 0.02);
+}
 .personal .content-main .content__settings .content__setting-right .change__region {
   height: 210px;
   border: 1px solid #464E61;
@@ -114,6 +122,25 @@
   background: #464E60;
   border: 0;
   color: #fff;
+  position: relative;
+}
+.personal .content-main .content__settings .content__setting-right .change__region button p {
+  margin: 0;
+  z-index: 3;
+}
+.personal .content-main .content__settings .content__setting-right .change__region button:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #33C078;
+  height: 100%;
+  width: 0;
+  border-radius: 5px;
+  transition: all 0.4s ease;
+}
+.personal .content-main .content__settings .content__setting-right .change__region button:hover:before {
+  width: 100%;
 }
 .personal .content-main .content__settings .content__setting-right .save__changes {
   display: flex;
@@ -129,6 +156,7 @@
   height: 65px;
   gap: 10px;
   border-radius: 5px;
+  position: relative;
   background: #464E60;
   border: 0;
   color: #fff;
@@ -136,6 +164,24 @@
 .personal .content-main .content__settings .content__setting-right .save__changes button.disable {
   opacity: 0.4;
   pointer-events: none;
+}
+.personal .content-main .content__settings .content__setting-right .save__changes button span {
+  position: relative;
+  z-index: 3;
+}
+.personal .content-main .content__settings .content__setting-right .save__changes button:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #33C078;
+  border-radius: 5px;
+  height: 100%;
+  width: 0;
+  transition: all 0.4s ease;
+}
+.personal .content-main .content__settings .content__setting-right .save__changes button:hover:before {
+  width: 100%;
 }
 
 #changeRegionModal .modal-dialog .modal-content .modal-body .search__content {
@@ -213,13 +259,31 @@
   height: 65px;
   gap: 10px;
   border-radius: 5px;
+  position: relative;
   background: #464E60;
   border: 0;
   color: #fff;
 }
+#changeRegionModal .modal-dialog .modal-content .modal-body .search__content .search__content-left .search__content-btn button span {
+  z-index: 3;
+}
 #changeRegionModal .modal-dialog .modal-content .modal-body .search__content .search__content-left .search__content-btn button.resetRegions {
-  background-color: transparent;
+  background-color: #17202B;
   border: 1px solid #464E61;
+}
+#changeRegionModal .modal-dialog .modal-content .modal-body .search__content .search__content-left .search__content-btn button:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #33C078;
+  border-radius: 5px;
+  height: 100%;
+  width: 0;
+  transition: all 0.4s ease;
+}
+#changeRegionModal .modal-dialog .modal-content .modal-body .search__content .search__content-left .search__content-btn button:hover:before {
+  width: 100%;
 }
 #changeRegionModal .modal-dialog .modal-content .modal-body .search__content .search__content-left .search__selected-items {
   display: flex;

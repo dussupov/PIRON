@@ -51,6 +51,9 @@ body {
   right: 6%;
   cursor: pointer;
 }
+.input .show-password.active {
+  background-image: url("/img/authorization/eye.svg");
+}
 .input .search {
   position: absolute;
   width: 24px;
@@ -374,6 +377,7 @@ body {
 .modal .modal-footer .modal-btn {
   width: 48%;
   height: 65px;
+  position: relative;
   background-color: #464E61;
   border: none;
   color: #F8FEFE;
@@ -383,6 +387,24 @@ body {
 .modal .modal-footer .modal-btn.disable {
   opacity: 0.4;
   pointer-events: none;
+}
+.modal .modal-footer .modal-btn span {
+  position: relative;
+  z-index: 3;
+}
+.modal .modal-footer .modal-btn:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #33C078;
+  border-radius: 5px;
+  height: 100%;
+  width: 0;
+  transition: all 0.4s ease;
+}
+.modal .modal-footer .modal-btn:hover:before {
+  width: 100%;
 }
 
 #changePasswordModal .modal-content {
