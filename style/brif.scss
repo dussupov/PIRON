@@ -368,17 +368,23 @@
                                         }
                                     }
     
-                                    label {
+                                    label{
                                         &::after {
                                             content: "";
                                             display: block;
                                             position: absolute;
-                                            left: 17%;
+                                            left: 13%;
                                             transform: translateY(-50%);
                                             top: 50%;
                                             height: 50%;
                                             width: 1px;
                                             background-color: #6B7177;
+                                            @media screen and (max-width : 1480px){
+                                                left: 19%;
+                                            }
+                                            @media screen and (max-width :1320px){
+                                                left: 20%;
+                                            }
                                         }
                                     }
     

@@ -47,5 +47,41 @@ window.addEventListener('load', () => {
         }
     })
 
+    //SELECT
+
+    let selectHeader = document.querySelectorAll('.select__header')
+    let selectItem = document.querySelectorAll('.select__item')
+    selectItem.forEach(e =>{
+        e.addEventListener('click', selectedItem)
+    })
+
+    selectHeader.forEach(e =>{
+        e.addEventListener('click', selectToggle)
+    })
+
+    function selectToggle(){
+        this.parentElement.classList.toggle('active')
+    }
+
+    function selectedItem(){
+        let text = this.innerText;
+        let selectForm = this.closest('.formSelect')
+        let currentText = selectForm.querySelector('.select__current')
+
+        currentText.innerText = text
+        currentText.classList.add('changed')
+        selectForm.classList.remove('active')
+    }
+
+    document.addEventListener('click', function(event) {
+        const isSelectFormClicked = event.target.closest('.formSelect');
+        
+        if (!isSelectFormClicked) {
+            const allSelectForms = document.querySelectorAll('.formSelect');
+            allSelectForms.forEach(selectForm => {
+                selectForm.classList.remove('active');
+            });
+        }
+    });
    
 })

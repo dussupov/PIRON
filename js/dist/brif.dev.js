@@ -5,7 +5,7 @@ window.addEventListener('load', function () {
   var contentFormBar = document.querySelectorAll('.content-form__bar-items .content-form__bar-item');
   var contentFormStep = document.querySelector('.content-form__step');
   var contentFormAcquaintance = document.querySelector('.content-form__acquaintance');
-  var contentFormAcquaintanceSelect = contentFormAcquaintance.querySelectorAll('select');
+  var contentFormAcquaintanceSelect = contentFormAcquaintance.querySelectorAll('.formSelect');
   var contentFormSelectRole = document.querySelector('.content-form__selectRole');
   var contentFormOPF = document.querySelector('.content-form__OPF');
   var contentFormSelectRoleItem = contentFormSelectRole.querySelectorAll('.content-form__selectRole-item');
@@ -41,11 +41,14 @@ window.addEventListener('load', function () {
           current = _checkAcquaintanceChe.current,
           error = _checkAcquaintanceChe.error;
 
+      console.log(error);
       var inputAcquaintance = contentFormAcquaintance.querySelector('input');
 
       if (error.length > 0) {
         contentFormAcquaintanceSelect.forEach(function (e) {
-          if (error.includes(e.name)) {
+          var eName = e.name || e.getAttribute('name');
+
+          if (error.includes(eName)) {
             e.classList.add('err');
           } else {
             e.classList.remove('err');
@@ -158,12 +161,17 @@ window.addEventListener('load', function () {
     var current = [];
     var input = contentFormAcquaintance.querySelector('input');
     contentFormAcquaintanceSelect.forEach(function (e) {
-      if (e.value == 'default') {
-        error.push(e.name);
+      var selectCurrent = e.querySelector('.select__current');
+      console.log(selectCurrent);
+
+      if (!selectCurrent.classList.contains('changed')) {
+        console.log(e.getAttribute('name'));
+        error.push(e.getAttribute('name'));
       } else {
+        var value = selectCurrent.textContent;
         var currentItem = {
-          name: e.name,
-          value: e.value
+          name: e.getAttribute('name'),
+          value: value
         };
         current.push(currentItem);
       }

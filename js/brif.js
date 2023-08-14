@@ -5,7 +5,7 @@ window.addEventListener('load', () => {
     const contentFormBar = document.querySelectorAll('.content-form__bar-items .content-form__bar-item')
     const contentFormStep = document.querySelector('.content-form__step')
     const contentFormAcquaintance = document.querySelector('.content-form__acquaintance')
-    const contentFormAcquaintanceSelect = contentFormAcquaintance.querySelectorAll('select')
+    const contentFormAcquaintanceSelect = contentFormAcquaintance.querySelectorAll('.formSelect')
     const contentFormSelectRole = document.querySelector('.content-form__selectRole')
     const contentFormOPF = document.querySelector('.content-form__OPF')
     const contentFormSelectRoleItem = contentFormSelectRole.querySelectorAll('.content-form__selectRole-item')
@@ -39,10 +39,12 @@ window.addEventListener('load', () => {
     nextButtons[1].addEventListener('click', () => {
         if (contentFormAcquaintance.classList.contains('swiper-slide-active')) {
             const { current, error } = checkAcquaintanceCheck()
+            console.log(error)
             const inputAcquaintance = contentFormAcquaintance.querySelector('input')
             if (error.length > 0) {
                 contentFormAcquaintanceSelect.forEach(e => {
-                    if (error.includes(e.name)) {
+                    let eName = e.name || e.getAttribute('name')
+                    if (error.includes(eName)) {
                         e.classList.add('err');
                     } else {
                         e.classList.remove('err');
@@ -174,10 +176,14 @@ window.addEventListener('load', () => {
         const current = []
         const input = contentFormAcquaintance.querySelector('input')
         contentFormAcquaintanceSelect.forEach(e => {
-            if (e.value == 'default') {
-                error.push(e.name)
+            let selectCurrent = e.querySelector('.select__current')
+            console.log(selectCurrent)
+            if (!selectCurrent.classList.contains('changed')) {
+                console.log(e.getAttribute('name'))
+                error.push(e.getAttribute('name'))
             } else {
-                const currentItem = { name: e.name, value: e.value }
+                let value = selectCurrent.textContent;
+                const currentItem = { name: e.getAttribute('name'), value: value }
                 current.push(currentItem)
             }
         })

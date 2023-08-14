@@ -46,5 +46,38 @@ window.addEventListener('load', function () {
         Content.style.width = "".concat(ContentW - 120, "px");
       }
     }
+  }); //SELECT
+
+  var selectHeader = document.querySelectorAll('.select__header');
+  var selectItem = document.querySelectorAll('.select__item');
+  selectItem.forEach(function (e) {
+    e.addEventListener('click', selectedItem);
+  });
+  selectHeader.forEach(function (e) {
+    e.addEventListener('click', selectToggle);
+  });
+
+  function selectToggle() {
+    this.parentElement.classList.toggle('active');
+  }
+
+  function selectedItem() {
+    var text = this.innerText;
+    var selectForm = this.closest('.formSelect');
+    var currentText = selectForm.querySelector('.select__current');
+    currentText.innerText = text;
+    currentText.classList.add('changed');
+    selectForm.classList.remove('active');
+  }
+
+  document.addEventListener('click', function (event) {
+    var isSelectFormClicked = event.target.closest('.formSelect');
+
+    if (!isSelectFormClicked) {
+      var allSelectForms = document.querySelectorAll('.formSelect');
+      allSelectForms.forEach(function (selectForm) {
+        selectForm.classList.remove('active');
+      });
+    }
   });
 });
