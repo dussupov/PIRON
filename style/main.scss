@@ -65,8 +65,31 @@ body {
         background-image: url('/img/personal/search.svg');
         top: 35%;
         right: 2%;
-        cursor: pointer;    
+        cursor: pointer;   
+        transition: all .1s ease; 
     } 
+    .close{
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        background-image: url('/img/personal/close.svg');
+        top: 35%;
+        right: 2%;
+        cursor: pointer;    
+        opacity: 0;
+        visibility: hidden;
+        transition: all .1s ease;
+    }
+    &.selected{
+        .close{
+            opacity: 1;
+            visibility: visible;
+        }
+        .search{
+            opacity: 0;
+            visibility: hidden;
+        }
+    }
     &.searchRegion{
         input{
             color: #fff;
@@ -178,16 +201,16 @@ body {
         right: 0;
         top: calc(100% + 31px);
         transition: all .2s ease;
-        background-color: #202932;
+        background-color: #464E60;
         z-index: 100;
 
         .select__item{
             height: 54px;
             padding: 16px 30px;
-            color: #6B7177;
+            color: #fff;
             cursor: pointer;
-            transition: all .4s ease;
-            border: 1px solid #464E61;
+            transition: all 0.4s ease;
+            border: 1px solid #d4deee29;
             border-top: 0;
             &:first-child{
                 border-radius: 5px 5px 0 0;
@@ -481,6 +504,9 @@ body {
         align-items: center;
         .title{
             font-size: 18px;
+            text-align: start;
+            margin-bottom: 20px;
+            width: 100%;
         }
         img{
             width: 250px;
@@ -853,6 +879,11 @@ main {
 
                         &.active{
                             background-color: #33C078;
+                        }
+
+                        a{
+                            color: #fff;
+                            text-decoration: none;
                         }
                     }
                 }

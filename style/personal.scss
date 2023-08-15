@@ -104,46 +104,52 @@
                     border-radius: 5px;
                     padding: 40px;
                     display: flex;
-                    flex-direction: column;
+                    flex-direction: row;
                     justify-content: space-between;
                     background:rgba(255, 255, 255, 0.02);
-                    span{
-                        font-size: 24px;
-                        line-height: 110%;
+                    .change__region-left{
                         width: 30%;
-                        font-family: 'Artifakt-Bold', 'sans-serif';
-                    }
-                    button{
                         display: flex;
-                        padding: 26px 40px;
-                        justify-content: center;
-                        align-items: center;
-                        height: 65px;
-                        gap: 10px;
-                        width: 223px;
-                        border-radius: 5px;
-                        background: #464E60;
-                        border: 0;
-                        color: #fff;
-                        position: relative;
-                        p{
-                            margin: 0;
-                            z-index: 3;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        span{
+                            font-size: 24px;
+                            line-height: 110%;
+                            width: 30%;
+                            font-family: 'Artifakt-Bold', 'sans-serif';
                         }
-                        &:before{
-                            content: "";
-                            position: absolute;
-                            top: 0;
-                            left: 0;
-                            background-color: #33C078;
-                            height: 100%;
-                            width: 0;
+                        button{
+                            display: flex;
+                            padding: 26px 40px;
+                            justify-content: center;
+                            align-items: center;
+                            height: 65px;
+                            gap: 10px;
+                            width: 223px;
                             border-radius: 5px;
-                            transition: all .4s ease;
-                        }
-                        &:hover{
+                            background: #464E60;
+                            border: 0;
+                            color: #fff;
+                            position: relative;
+                            p{
+                                margin: 0;
+                                z-index: 3;
+                            }
                             &:before{
-                                width: 100%;
+                                content: "";
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                background-color: #33C078;
+                                height: 100%;
+                                width: 0;
+                                border-radius: 5px;
+                                transition: all .4s ease;
+                            }
+                            &:hover{
+                                &:before{
+                                    width: 100%;
+                                }
                             }
                         }
                     }
@@ -235,7 +241,7 @@
                         height: 560px;
                         display: block;
                         overflow: overlay;
-                        padding-bottom: 100px;
+                        // padding-bottom: 100px;
                         &::-webkit-scrollbar{
                             background-color: #0A101D; /* Цвет бегунка */
                             border-radius: 0; /* Округление бегунка */
@@ -257,7 +263,7 @@
                             position: fixed;
                             width: 460px;
                             background: #17202B;
-                            bottom: 230px;
+                            bottom: 270px;
                             height: 100px;
                             justify-content: space-between;
                             align-items: center;

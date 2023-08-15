@@ -35,16 +35,6 @@ window.addEventListener('load', () => {
                             let childLabel = childBoxName.textContent;
                             e.querySelector('input').checked = true
                             e.classList.add('disable')
-
-                            // Добавляем HTML-код выбранного элемента
-                            // searchSelectedBox.innerHTML += `
-                            // <div class="search__selected-item">
-                            //     <div class="checkbox searchSelected">
-                            //         <label for="">${childLabel}</label>
-                            //         <img src="/img/register/btn-close.svg" alt="x">
-                            //     </div>
-                            // </div>
-                            // `;
                         });
 
                         checkboxList.forEach(i => {
@@ -54,8 +44,7 @@ window.addEventListener('load', () => {
                                 item.querySelector('img').addEventListener('click', () => {
                                     if (parentCheckBoxLabel == item.querySelector('label').textContent) {
                                         i.querySelector('input').checked = false
-                                        checkBoxMore.forEach(e =>{
-                                            console.log(e)
+                                        checkBoxMore.forEach(e => {
                                             e.classList.remove('disable')
                                             e.querySelector('input').checked = false
                                         })
@@ -226,11 +215,11 @@ window.addEventListener('load', () => {
         let val = e.target.value.trim();
         let items = document.querySelectorAll('.checkbox.more');
         let searchContentItems = document.querySelectorAll('.search__content-item');
-
+        let inputContainer = document.querySelector('.input.searchRegion')
         if (val != '') {
             // Показываем контейнер с результатами поиска
             document.querySelector('.search__content-items').classList.add('active');
-
+            inputContainer.classList.add('selected')
             let groupedItems = {};
 
             items.forEach(i => {
@@ -247,6 +236,13 @@ window.addEventListener('load', () => {
                     }
                 }
             });
+
+            let inputCloseBtn = inputContainer.querySelector('.close')
+            inputCloseBtn.addEventListener('click', () => {
+                document.querySelector('.search__content-items').classList.remove('active')
+                inputContainer.classList.remove('selected')
+                e.target.value = ''
+            })
 
             let searchContentHTML = '';
 
@@ -282,13 +278,18 @@ window.addEventListener('load', () => {
                         searchUpdateItem.forEach(searchItem => {
                             if (searchItem.querySelector('label').textContent == el.querySelector('label').textContent) {
                                 searchItem.querySelector('input').checked = true;
-                            }
+                                if (el.classList.contains('disable')) {
+                                    searchItem.classList.add('disable')
+                                }
+                            } 
                         })
                     }
                 })
             })
         } else {
             // Скрываем контейнер с результатами, если поле поиска пустое
+            let inputContainer = document.querySelector('.input.searchRegion')
+            inputContainer.classList.remove('selected')
             document.querySelector('.search__content-items').classList.remove('active');
         }
 
@@ -311,6 +312,22 @@ window.addEventListener('load', () => {
                             if (el.querySelector('label').textContent == e.querySelector('label').textContent) {
                                 el.querySelector('input').checked = false
                             }
+
+                            const parentCheckBox = el.closest('.checkbox.list')
+                            const childCheckBox = parentCheckBox.querySelectorAll('.checkbox.more')
+                            let checkedCheckBoxChildCounter = childCheckBox.length
+
+                            childCheckBox.forEach(e => {
+                                if (checkedCheckBoxChildCounter > 1) {
+                                    if (e.querySelector('input').checked == false) {
+                                        checkedCheckBoxChildCounter--
+                                    }
+                                }
+                                else {
+                                    let parentCheckboxMain = parentCheckBox.querySelector('.checkbox-main input');
+                                    parentCheckboxMain.checked = false
+                                }
+                            })
                         })
                     })
                     e.querySelector('input').checked = false
@@ -354,6 +371,7 @@ window.addEventListener('load', () => {
                         checkBoxMore.forEach(el => {
                             if (el.querySelector('label').textContent == e.querySelector('label').textContent) {
                                 el.querySelector('input').checked = true
+                                el.closest('.checkbox.list').querySelector('.checkbox-main input').checked = true
                             }
                         })
                     })
@@ -362,4 +380,42 @@ window.addEventListener('load', () => {
             })
         })
     };
+
+    //Кнопки модального окна выбора региона
+
+    let resetRegion = document.querySelector('.resetRegions')
+    let saveRegion = document.querySelector('.saveRegions')
+    let selectedItemsBox = document.querySelector('.search__selected-items')
+    resetRegion.addEventListener('click', () => {
+        let checkBoxList = document.querySelectorAll('.checkbox.list')
+        checkBoxList.forEach(el => {
+            const checkboxMore = el.querySelectorAll('.checkbox.more')
+            const inputs = el.querySelectorAll('input')
+            inputs.forEach(input => {
+                input.checked = false
+                input.classList.remove('disable')
+            })
+            checkboxMore.forEach(cbm =>{
+                if(cbm.classList.contains('disable')){
+                    cbm.classList.remove('disable')
+                }
+            })
+        })
+        selectedItemsBox.innerHTML = ``
+    })
+    saveRegion.addEventListener('click', ()=>{
+        if(selectedItemsBox.innerHTML != ''){
+            let selectedItems = selectedItemsBox.querySelectorAll('.search__selected-item')
+            let changeRegionRightItems = document.querySelector('.change__region-right-items')
+            changeRegionRightItems.innerHTML = ''
+            selectedItems.forEach(item =>{
+                let label = item.querySelector('label').textContent
+                changeRegionRightItems.innerHTML +=`
+                    <div class="change__region-right-item">
+                        <span>${label}</span>
+                    </div>
+                `
+            }) 
+        }
+    })
 });

@@ -12,3 +12,143 @@ header .header__bottom .header__items .header__item .change__personal-items .cha
 header .header__bottom .header__items .header__item .change__personal-items .change__personal-item.goBack img {
   width: 24px;
 }
+
+.content-main .companyData {
+  display: flex;
+  justify-content: space-between;
+}
+.content-main .companyData .companyData-left {
+  width: 77%;
+}
+.content-main .companyData .companyData-left .companyData-left__check {
+  background: #17202B;
+  border-radius: 5px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 30px;
+}
+.content-main .companyData .companyData-left .companyData-left__check .companyData-left__check-input {
+  display: flex;
+  gap: 20px;
+}
+.content-main .companyData .companyData-left .companyData-left__check .companyData-left__check-btn button {
+  display: flex;
+  padding: 15px 120px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  border: 0;
+  background: #464E60;
+  color: #fff;
+  position: relative;
+}
+.content-main .companyData .companyData-left .companyData-left__check .companyData-left__check-btn button::before {
+  content: "";
+  width: 0;
+  height: 100%;
+  background-color: #33C078;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  border-radius: 5px;
+  transition: all 0.4s ease;
+}
+.content-main .companyData .companyData-left .companyData-left__check .companyData-left__check-btn button:hover::before {
+  width: 100%;
+}
+.content-main .companyData .companyData-left .companyData-left__check .companyData-left__check-btn button span {
+  z-index: 3;
+}
+.content-main .companyData .companyData-left .companyData-left__info {
+  display: flex;
+  gap: 20px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+.content-main .companyData .companyData-left .companyData-left__info .input {
+  width: 32%;
+}
+.content-main .companyData .companyData-left .companyData-left__info .formSelect {
+  width: 32%;
+  margin: 0;
+}
+.content-main .companyData .companyData-left .companyData-left__bank {
+  background-color: #17202B;
+}
+.content-main .companyData .companyData-left .companyData-left__bank .companyData-left__bank-title {
+  padding: 17px 30px;
+  background-color: #464E60;
+  border-radius: 5px 5px 0 0;
+  display: flex;
+  gap: 10px;
+  font-family: "Artifakt-Bold", sans-serif;
+}
+.content-main .companyData .companyData-left .companyData-left__bank .companyData-left__bank-input {
+  padding: 35px 30px;
+  display: flex;
+  justify-content: space-between;
+}
+.content-main .companyData .companyData-left .companyData-left__bank .companyData-left__bank-input .input {
+  width: 30%;
+}
+.content-main .companyData .companyData-right {
+  width: 18%;
+}
+.content-main .companyData .companyData-right .companyData-right-items {
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.content-main .companyData .companyData-right .companyData-right-items .companyData-right-ceo {
+  background-color: #17202B;
+}
+.content-main .companyData .companyData-right .companyData-right-items .companyData-right-ceo .companyData-right-ceo__title {
+  padding: 17px 30px;
+  background-color: #464E60;
+  border-radius: 5px 5px 0 0;
+  display: flex;
+  gap: 10px;
+  font-family: "Artifakt-Bold", sans-serif;
+}
+.content-main .companyData .companyData-right .companyData-right-items .companyData-right-ceo .companyData-right-ceo__input {
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.content-main .companyData .companyData-right button {
+  margin: 20px 0;
+  display: flex;
+  border: 0;
+  width: 100%;
+  padding: 15px 40px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background: #464E60;
+  color: #fff;
+  position: relative;
+}
+.content-main .companyData .companyData-right button::before {
+  content: "";
+  width: 0;
+  height: 100%;
+  background-color: #33C078;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  border-radius: 5px;
+  transition: all 0.4s ease;
+}
+.content-main .companyData .companyData-right button:hover::before {
+  width: 100%;
+}
+.content-main .companyData .companyData-right button span {
+  z-index: 3;
+}

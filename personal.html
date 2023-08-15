@@ -154,7 +154,7 @@
                             <div class="change__personal-items">
                                 <div class="change__personal-item aboutCompany">
                                     <img src="/img/personal/file-search-alt.svg" alt="icon">
-                                    <span>Данные компании</span>
+                                    <a href="/companyData.html"><span>Данные компании</span></a>
                                 </div>
                                 <div class="change__personal-item changePassword" data-bs-toggle="modal"
                                     data-bs-target="#changePasswordModal">
@@ -336,10 +336,15 @@
                             </div>
                         </div>
                         <div class="change__region">
-                            <span>Регион проектирования</span>
-                            <button data-bs-toggle="modal" data-bs-target="#changeRegionModal">
-                                <p>Выбрать регион</p>
-                            </button>
+                            <div class="change__region-left">
+                                <span>Регион проектирования</span>
+                                <button data-bs-toggle="modal" data-bs-target="#changeRegionModal">
+                                    <p>Выбрать регион</p>
+                                </button>
+                            </div>
+                            <div class="change__region-right">
+                                <div class="change__region-right-items"></div>
+                            </div>
                         </div>
                         <div class="save__changes">
                             <button class="save__changes-cancel disable"><span>Отменить</span></button>
@@ -365,15 +370,14 @@
                 <div class="modal-body">
                     <div class="title">
                         <span>
-                            По фото профиля другие люди смогут вас узнавать, а вам будет проще определять, в какой
-                            аккаунт вы вошли.
+                            Просим загружать реальные фотографии.
                         </span>
                     </div>
                     <img src="/img/personal/avatar_large.png" alt="avatar">
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary modal-btn">Сменить</button>
-                    <button type="button" class="btn btn-secondary modal-btn disable">Удалить</button>
+                    <button type="button" class="btn btn-secondary modal-btn"><span>Сменить</span></button>
+                    <button type="button" class="btn btn-secondary modal-btn disable"><span>Удалить</span></button>
                 </div>
             </div>
         </div>
@@ -425,6 +429,7 @@
                     <div class="input searchRegion">
                         <input type="text" placeholder="Поиск региона">
                         <span class="search"></span>
+                        <span class="close"></span>
                     </div>
                     <div class="search__content">
                         <div class="search_content-right">
@@ -437,6 +442,14 @@
                                     <div class="checkbox-main">
                                         <input type="checkbox">
                                         <label for="">Центральный ФО - 84</label>
+                                    </div>
+                                    <div class="search__item-more">
+                                        <div class="item">
+                                            <div class="checkbox more">
+                                                <input type="checkbox">
+                                                <label class="search__more-name" for="">Республика Коми</label>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="checkbox list">
@@ -553,17 +566,27 @@
                                         <input type="checkbox">
                                         <label for="">Уральскй ФО - 23</label>
                                     </div>
+                                    <div class="search__item-more">
+                                        <div class="item">
+                                            <div class="checkbox more">
+                                                <input type="checkbox">
+                                                <label class="search__more-name" for="">Республика Коми</label>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="checkbox list">
                                     <div class="checkbox-main">
                                         <input type="checkbox">
                                         <label for="">Сибирский ФО - 23</label>
                                     </div>
-                                </div>
-                                <div class="checkbox list">
-                                    <div class="checkbox-main">
-                                        <input type="checkbox">
-                                        <label for="">Центральный ФО - 84</label>
+                                    <div class="search__item-more">
+                                        <div class="item">
+                                            <div class="checkbox more">
+                                                <input type="checkbox">
+                                                <label class="search__more-name" for="">Республика Коми</label>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="checkbox list">
@@ -571,11 +594,13 @@
                                         <input type="checkbox">
                                         <label for="">Центральный ФО - 84</label>
                                     </div>
-                                </div>
-                                <div class="checkbox list">
-                                    <div class="checkbox-main">
-                                        <input type="checkbox">
-                                        <label for="">Центральный ФО - 84</label>
+                                    <div class="search__item-more">
+                                        <div class="item">
+                                            <div class="checkbox more">
+                                                <input type="checkbox">
+                                                <label class="search__more-name" for="">Республика Коми</label>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

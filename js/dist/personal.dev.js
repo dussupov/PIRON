@@ -27,15 +27,7 @@ window.addEventListener('load', function () {
               var childBoxName = e.querySelector('.search__more-name');
               var childLabel = childBoxName.textContent;
               e.querySelector('input').checked = true;
-              e.classList.add('disable'); // Добавляем HTML-код выбранного элемента
-              // searchSelectedBox.innerHTML += `
-              // <div class="search__selected-item">
-              //     <div class="checkbox searchSelected">
-              //         <label for="">${childLabel}</label>
-              //         <img src="/img/register/btn-close.svg" alt="x">
-              //     </div>
-              // </div>
-              // `;
+              e.classList.add('disable');
             });
             checkboxList.forEach(function (i) {
               var parentCheckBoxLabel = i.querySelector('label').textContent;
@@ -45,7 +37,6 @@ window.addEventListener('load', function () {
                   if (parentCheckBoxLabel == item.querySelector('label').textContent) {
                     i.querySelector('input').checked = false;
                     checkBoxMore.forEach(function (e) {
-                      console.log(e);
                       e.classList.remove('disable');
                       e.querySelector('input').checked = false;
                     });
@@ -206,10 +197,12 @@ window.addEventListener('load', function () {
     var val = e.target.value.trim();
     var items = document.querySelectorAll('.checkbox.more');
     var searchContentItems = document.querySelectorAll('.search__content-item');
+    var inputContainer = document.querySelector('.input.searchRegion');
 
     if (val != '') {
       // Показываем контейнер с результатами поиска
       document.querySelector('.search__content-items').classList.add('active');
+      inputContainer.classList.add('selected');
       var groupedItems = {};
       items.forEach(function (i) {
         if (i.innerText.search(new RegExp(val, 'i')) == -1) {// Ничего не делаем, элемент не соответствует запросу
@@ -224,6 +217,12 @@ window.addEventListener('load', function () {
             groupedItems[parentLabel].push(i.querySelector('label').textContent);
           }
         }
+      });
+      var inputCloseBtn = inputContainer.querySelector('.close');
+      inputCloseBtn.addEventListener('click', function () {
+        document.querySelector('.search__content-items').classList.remove('active');
+        inputContainer.classList.remove('selected');
+        e.target.value = '';
       });
       var searchContentHTML = '';
 
@@ -246,6 +245,10 @@ window.addEventListener('load', function () {
             searchUpdateItem.forEach(function (searchItem) {
               if (searchItem.querySelector('label').textContent == el.querySelector('label').textContent) {
                 searchItem.querySelector('input').checked = true;
+
+                if (el.classList.contains('disable')) {
+                  searchItem.classList.add('disable');
+                }
               }
             });
           }
@@ -253,6 +256,10 @@ window.addEventListener('load', function () {
       });
     } else {
       // Скрываем контейнер с результатами, если поле поиска пустое
+      var _inputContainer = document.querySelector('.input.searchRegion');
+
+      _inputContainer.classList.remove('selected');
+
       document.querySelector('.search__content-items').classList.remove('active');
     } // Обработчики событий для элементов результатов поиска
 
@@ -276,6 +283,20 @@ window.addEventListener('load', function () {
               if (el.querySelector('label').textContent == e.querySelector('label').textContent) {
                 el.querySelector('input').checked = false;
               }
+
+              var parentCheckBox = el.closest('.checkbox.list');
+              var childCheckBox = parentCheckBox.querySelectorAll('.checkbox.more');
+              var checkedCheckBoxChildCounter = childCheckBox.length;
+              childCheckBox.forEach(function (e) {
+                if (checkedCheckBoxChildCounter > 1) {
+                  if (e.querySelector('input').checked == false) {
+                    checkedCheckBoxChildCounter--;
+                  }
+                } else {
+                  var parentCheckboxMain = parentCheckBox.querySelector('.checkbox-main input');
+                  parentCheckboxMain.checked = false;
+                }
+              });
             });
           });
           e.querySelector('input').checked = false;
@@ -312,6 +333,7 @@ window.addEventListener('load', function () {
             checkBoxMore.forEach(function (el) {
               if (el.querySelector('label').textContent == e.querySelector('label').textContent) {
                 el.querySelector('input').checked = true;
+                el.closest('.checkbox.list').querySelector('.checkbox-main input').checked = true;
               }
             });
           });
@@ -319,5 +341,38 @@ window.addEventListener('load', function () {
         }
       });
     });
-  };
+  }; //Кнопки модального окна выбора региона
+
+
+  var resetRegion = document.querySelector('.resetRegions');
+  var saveRegion = document.querySelector('.saveRegions');
+  var selectedItemsBox = document.querySelector('.search__selected-items');
+  resetRegion.addEventListener('click', function () {
+    var checkBoxList = document.querySelectorAll('.checkbox.list');
+    checkBoxList.forEach(function (el) {
+      var checkboxMore = el.querySelectorAll('.checkbox.more');
+      var inputs = el.querySelectorAll('input');
+      inputs.forEach(function (input) {
+        input.checked = false;
+        input.classList.remove('disable');
+      });
+      checkboxMore.forEach(function (cbm) {
+        if (cbm.classList.contains('disable')) {
+          cbm.classList.remove('disable');
+        }
+      });
+    });
+    selectedItemsBox.innerHTML = "";
+  });
+  saveRegion.addEventListener('click', function () {
+    if (selectedItemsBox.innerHTML != '') {
+      var selectedItems = selectedItemsBox.querySelectorAll('.search__selected-item');
+      var changeRegionRightItems = document.querySelector('.change__region-right-items');
+      changeRegionRightItems.innerHTML = '';
+      selectedItems.forEach(function (item) {
+        var label = item.querySelector('label').textContent;
+        changeRegionRightItems.innerHTML += "\n                    <div class=\"change__region-right-item\">\n                        <span>".concat(label, "</span>\n                    </div>\n                ");
+      });
+    }
+  });
 });
