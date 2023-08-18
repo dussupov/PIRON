@@ -27,6 +27,18 @@ header{
         justify-content: space-between;
         .companyData-left{
             width: 77%;
+            overflow-y: scroll;
+            max-height: 75vh;
+            height: 100%;
+            &::-webkit-scrollbar{
+                background-color: #0A101D;
+                border-radius: 0;
+                width: 5px;
+            }
+            &::-webkit-scrollbar-thumb {
+                background-color: #607383;
+                border-radius: 30px;
+            }
             .companyData-left__check{
                 background: #17202B;
                 border-radius: 5px;
@@ -91,6 +103,7 @@ header{
             }
             .companyData-left__bank{
                 background-color: #17202B;
+                border-radius: 5px;
                 .companyData-left__bank-title{
                     padding: 17px 30px;
                     background-color: #464E60;

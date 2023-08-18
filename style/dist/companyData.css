@@ -19,6 +19,18 @@ header .header__bottom .header__items .header__item .change__personal-items .cha
 }
 .content-main .companyData .companyData-left {
   width: 77%;
+  overflow-y: scroll;
+  max-height: 75vh;
+  height: 100%;
+}
+.content-main .companyData .companyData-left::-webkit-scrollbar {
+  background-color: #0A101D;
+  border-radius: 0;
+  width: 5px;
+}
+.content-main .companyData .companyData-left::-webkit-scrollbar-thumb {
+  background-color: #607383;
+  border-radius: 30px;
 }
 .content-main .companyData .companyData-left .companyData-left__check {
   background: #17202B;
@@ -78,6 +90,7 @@ header .header__bottom .header__items .header__item .change__personal-items .cha
 }
 .content-main .companyData .companyData-left .companyData-left__bank {
   background-color: #17202B;
+  border-radius: 5px;
 }
 .content-main .companyData .companyData-left .companyData-left__bank .companyData-left__bank-title {
   padding: 17px 30px;

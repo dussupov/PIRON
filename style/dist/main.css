@@ -3,6 +3,17 @@ body {
   background-image: none;
   margin: 0;
 }
+body::-webkit-scrollbar {
+  background-color: #0A101D;
+  /* Цвет бегунка */
+  border-radius: 0;
+  /* Округление бегунка */
+  width: 5px;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: #607383;
+  border-radius: 30px;
+}
 
 .input {
   display: flex;
