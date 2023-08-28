@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="/style/dist/general.css">
     <link rel="stylesheet" href="/style/dist/main.css">
     <link rel="stylesheet" href="/style/dist/companyData.css">
+    <link rel="stylesheet" href="/style/dist/projectManager.css">
     <title>Document</title>
 </head>
 
@@ -31,7 +32,7 @@
                         </div>
                     </div>
 
-                    <div class="sidebar-item active">
+                    <div class="sidebar-item">
                         <div class="sidebar-item__img">
                             <img src="/img/sidebars/Personal_Area.svg" alt="personal">
                         </div>
@@ -40,7 +41,7 @@
                         </div>
                     </div>
 
-                    <div class="sidebar-item">
+                    <div class="sidebar-item active">
                         <div class="sidebar-item__img">
                             <img src="/img/sidebars/Project.svg" alt="projects">
                         </div>
@@ -91,7 +92,7 @@
             <header>
                 <div class="header__up">
                     <div class="header-title">
-                        <h2>Личный кабинет</h2>
+                        <h2>Менеджер проектов</h2>
                     </div>
                     <div class="header-balance">
                         <div class="header-balance__icon">
@@ -134,39 +135,17 @@
                 </div>
             </header>
             <div class="content-main">
-
-                <!-- INPUT -->
-
-                <div class="input">
-                    <label for="">Фамилия <span>*</span></label>
-                    <input type="text" placeholder="Ваша фамилия" name="secondName">
-                </div>
-
-                <!-- SELECT -->
-
-                <div class="formSelect" name="country">
-                    <label>Страна<span>*</span></label>
-                    <div class="select__header">
-                        <span class="select__current">Выберите страну</span>
-                        <div class="select__icon"></div>
+                <div class="projectManager-empty">
+                    <div class="projectManager-empty__title">
+                        <span>У Вас нет активных проектов</span>
                     </div>
-                    <div class="select__body">
-                        <div class="select__item">Казахстан</div>
-                        <div class="select__item">Россия</div>
+                    <div class="projectManager-empty__subtitle">
+                        <span>Создайте свой первый проект</span>
+                    </div>
+                    <div class="projectManager-empty__btn">
+                        <button><span>Создать проект</span></button>
                     </div>
                 </div>
-                
-                <!-- CHECKBOX -->
-
-                <div class="checkbox">
-                    <input type="checkbox">
-                    <label class="search__more-name" for="">Республика Коми</label>
-                </div>
-
-
-
-
-
             </div>
         </div>
     </main>
@@ -179,7 +158,6 @@
         </script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="/js/script.js"></script>
-    <script src="/js/personal.js"></script>
 </body>
 
 </html>

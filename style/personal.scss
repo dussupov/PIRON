@@ -83,6 +83,10 @@
                         &.company{
                             width: 100%;
                         }
+                        &.phone,
+                        &.email{
+                            width: 49%;
+                        }
                         margin-bottom: 20px;
                     }
                     .select{
@@ -231,6 +235,11 @@
                             flex-direction: column;
                             gap: 10px;
                         }
+                        label{
+                            &:hover{
+                                cursor: pointer;
+                            }
+                        }
                     }
                     .search__content-left{
                         background-color: #17202B;
@@ -260,10 +269,10 @@
 
                         .search__content-btn{
                             display: flex;
-                            position: fixed;
-                            width: 460px;
+                            position: sticky;
+                            width: 449px;
                             background: #17202B;
-                            bottom: 270px;
+                            top: 100%;
                             height: 100px;
                             justify-content: space-between;
                             align-items: center;
